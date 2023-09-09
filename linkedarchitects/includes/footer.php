@@ -1,0 +1,1 @@
+<div id="footer" class="container">	<p>&copy; Linked Architects 2011</p></div>
