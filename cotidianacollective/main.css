@@ -1,0 +1,345 @@
+/* http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126   License: none (public domain)*/html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video { margin: 0;  padding: 0; border: 0;  font-size: 100%;    font: inherit;  vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {    display: block;}body {  line-height: 1;}ol, ul {    list-style: none;}blockquote, q {   quotes: none;}blockquote:before, blockquote:after,q:before, q:after {   content: '';    content: none;}table {  border-collapse: collapse;  border-spacing: 0;}
+
+/***********************************/
+/* BASICS CLASSES
+/***********************************/
+body {
+    font: 400 14px/1.6em "Helvetic Nueu", Helvetica, sans-serif;
+    color: #4a281e;
+    position: relative;
+    font-weight: 300;
+}
+h1 {
+    font: 300 2.4em/1.4em "Helvetic Nueu", Helvetica, sans-serif;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 3px;
+    color: #ee3368;
+}
+h2 {
+    font: 400 1.4em/1.4em "Helvetic Nueu", Helvetica, sans-serif;
+    color: #4a281e;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 20px;
+}
+h3 {
+    font: 400 1.3em/1.4em "Helvetic Nueu", Helvetica, sans-serif;
+    color: #4a281e;
+    margin-bottom: 14px;
+    margin-top: 24px;
+}
+
+a { color:#2342b4; text-decoration: none; }
+a:hover { color:#0b6c95; text-decoration: underline; }
+a:visited { color:#1a3599; }
+
+p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+blockquote {
+    font-size: 1.4em;
+    font-family: "Helvetic Nueu", Helvetica, sans-serif;
+    font-style: italic;
+}
+
+dfn { font-size: 1em; }
+
+strong { font-weight: bold; }
+
+/***********************************/
+/* REUSABLE CLASSES
+/***********************************/
+.clear { clear: both; }
+
+.container {
+    margin: auto;
+    width: 868px;
+    position: relative;
+}
+
+/* Columns */
+.columns.two, .columns.three { width: 100%; padding-bottom: 20px; clear: both; }
+
+    /* Two Columns */
+    .columns.two .col1 { float: left; width: 47%; margin-right: 6%; }
+    .columns.two .col2 { width: 47%; float: right; }
+
+        /* Two Columns with a border between them: wborder */
+        .columns.two .col1.wborder { width: 46%; border-right: 1px solid #afa4a4; padding-right: 3%; margin-right: 3%; }
+
+    /* Three Columns */
+    .columns.three .col1 { float: left; width: 32%; margin-right: 4%; }
+    .columns.three .col2 { width: 28%; float: left; margin-right: 4%; }
+    .columns.three .col3 { width: 32%; float: right; }
+
+
+.line-arrows {
+    width: 100%; height: 16px;
+    background: url('media/img/line.jpg') repeat-x;
+}
+
+.motto {
+    font: 300 1.3em/1.4em "Helvetic Nueu", Helvetica, sans-serif;
+    color: #90807b;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.wbullets {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+p.subtitle {
+    font-weight: 400;
+}
+
+.right { float: right;  }
+.left { float: left;  }
+
+img.right { margin: 0 0 0 30px; }
+img.left { margin: 0 30px 0 0; }
+
+/* Blurb */
+.blurb.right {
+    margin: 4px 0 20px 40px;
+    width: 30%;
+    border-left: 1px solid #d9d9d9;
+    padding: 40px 0 40px 40px;
+}
+.blurb.right p {
+    font-weight: 400;
+    text-align: center;
+}
+.blurb.right ul li{
+    text-align: center;
+    line-height: 1.8em;
+}
+
+/***********************************/
+/* HEADER   + MENU
+/***********************************/
+.main-header { margin: 10px 0; }
+    /*Logo*/
+    .main-header img.logo {
+        width: 180px;
+        margin: 10px;
+        display: block;
+        margin: auto;
+    }
+.menu {
+    width: 100%; height: auto;
+    position: relative;
+    color: #444;
+    font-size: 1.4em;
+    margin: auto;
+    display: block;
+    width: 780px;
+    text-align: center;
+    overflow: hidden;
+}
+    .menu a { text-decoration: none; }
+        .menu li {
+            display: inline-block;
+            font-family: "Helvetic Nueu", Helvetica, sans-serif;
+            font-weight: 400;
+            text-transform: lowercase;
+            letter-spacing: 2px;
+        }
+            .menu li a {
+                display: block;
+                padding: 12px 20px 4px;
+                color: #4a281e;
+            }
+            .menu li a:hover { color: #4a281e; }
+
+    /* Selected menu items and hovers (same) */
+    .home .menu .home,
+    .menu .home:hover
+        { background: url('media/img/arrows/red-down.png') no-repeat top center; }
+    .services .menu .services,
+    .menu .services:hover
+        { background: url('media/img/arrows/purple-down.png') no-repeat top center; }
+    .about .menu .about,
+    .menu .about:hover
+        { background: url('media/img/arrows/yellow-down.png') no-repeat top center; }
+    .contact .menu .contact,
+    .menu .contact:hover
+        { background: url('media/img/arrows/blue-down.png') no-repeat top center; }
+
+
+/***********************************/
+/* MAIN CONTENT
+/***********************************/
+.container.content {
+    clear: both;
+    margin: 20px auto 40px;
+}
+
+/***********************************/
+/* FOOTER
+/***********************************/
+.wrapper-footer .container {
+    border-top: 1px solid #30c7f4;
+    padding: 20px 0;
+}
+
+/***********************************/
+/* CAROUSEL (only on homepage atm)
+/***********************************/
+.main-carousel {
+    position: relative;
+    margin-bottom: 20px;
+    height: 500px;
+}
+    .main-carousel img { width: 783px; }
+
+/***********************************/
+/* BORDER ELEMENT
+/***********************************/
+.container.border {
+    width: 783px;
+    padding: 43px;
+    background: url('media/img/border.jpg') no-repeat;
+    height: 453px;
+    margin-bottom: 20px;
+}
+
+/***********************************/
+/* CONTACT FORM
+/***********************************/
+.contact-form {}
+
+    /* Textarea (Message) */
+    .contact-form fieldset.message {
+        float: left;
+        display: block;
+        border: 1px dotted #d9d9d9;
+        border-width: 0 3px 0 0;
+        width: 360px;
+        height: 350px;
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .contact-form fieldset.message textarea{
+        width: 300px;
+        height: 300px;
+        border: 1px solid #b6b0b0;
+    }
+    .contact-form fieldset.message label{
+        clear: right;
+        display: block;
+    }
+
+    /* One line inputs */
+    .contact-form fieldset.info {
+        float: right;
+        display: block;
+        margin-top: 140px;
+        width: 280px;
+        margin-right: 50px;
+    }
+
+    .contact-form input {
+        display: block;
+        clear: right;
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.2em;
+        border: 1px solid #b6b0b0;
+        width: 280px;
+        padding: 2px 4px;
+    }
+
+    /* Submit */
+    .contact-form input[type="submit"] {
+        background-color: #32c6f4;
+        border: 1px solid #32c6f4;
+        color: #fff;
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        width: 210px;
+        padding: 4px;
+    }
+        .contact-form input[type="submit"]:hover { cursor: pointer; background-color: #1a3599; }
+
+        /* Disabled loading submit */
+        .contact-form input[type="submit"].disabled,
+        .contact-form input[type="submit"].disabled:hover
+         {
+            background-color: #d9d9d9;
+            color: #fff;
+            border-width: 0;
+        }
+
+        /* Disabled thank you submit */
+        .contact-form input.disabled.thanks,
+        .contact-form input.disabled.thanks:hover {
+            background-color: #fff;
+            color: #32c6f6;
+            border-width: 0;
+            cursor: default;
+        }
+
+    /* Errors */
+    .contact-form .error,
+    .contact-form fieldset.message textarea.error
+    {
+        border: 1px solid red;
+    }
+
+    .contact-form .error-message {
+        color: red;
+        font-size: 11px;
+        display: none;
+    }
+
+/***********************************/
+/* WRAPPERS
+/***********************************/
+.wrapper-menu {}
+.wrapper-footer {
+    color: #afa4a4;
+    text-align: center;
+    font-weight: 300;
+    font-size: 11px;
+}
+.wrapper-menu {}
+
+/***********************************/
+/* SERVICES PAGE
+/***********************************/
+.services {}
+    .services .columns { margin-top: 20px; }
+    .services h3 { margin-top: 0; }
+
+/***********************************/
+/* CONTACT PAGE (aside from form)
+/***********************************/
+.contact {}
+    .contact .stamp {
+        position: absolute;
+        right:80px; top: 80px;
+    }
+    .contact .email-addie {
+        position: absolute; display: block;
+        bottom: 50px; left: 300px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+        .contact .email-addie:hover { text-decoration: none; color: #32c6f4; }
+
+/***********************************/
+/* CONSTRUCTION PAGE
+/***********************************/
+.temp {}
+    .temp .container { width: 400px;  margin-top: 40px; }
+    .temp a { color: #32c6f4; font-weight: bold; }
+

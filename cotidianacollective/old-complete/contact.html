@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0067)http://weallseed.org/cotidianacollective/site/final/contactus_6.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>COTIDIANA COLLECTIVE</title>
+<link href="http://weallseed.org/cotidianacollective/site/final/fabicon.ico" rel="shortcut icon">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url();
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.contact_form {
+	height: 100px;
+	width: 260px;
+	text-align: left;
+	display: block;
+	float: right;
+	max-height: 100px;
+	max-width: 260px;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages(&#39;images/home_off.png&#39;,&#39;images/home_over.png&#39;,&#39;images/contactus_over.png&#39;,&#39;images/aboutus_over.png&#39;,&#39;images/services_over.png&#39;,&#39;images/contactus_off.png&#39;)">
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="1024" height="19"></td>
+  </tr>
+</tbody></table>
+<table width="869" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="869" height="539" background="./dana2_files/banner_bg5.png"><table width="869" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td width="869" height="539" align="center" valign="middle"><table width="783" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td width="783" height="453" align="center" valign="middle" bgcolor="#FFFFFF"><div><form name="contactform" method="post" action="http://weallseed.org/cotidianacollective/site/final/send_form_email.php">
+<table width="750" background="./dana2_files/contactus_bg.png">
+<tbody><tr>
+  <td width="314" height="159" align="right" valign="bottom"><textarea name="comments" cols="31" rows="6" class="contact_form"></textarea></td>
+  <td align="right" valign="top">&nbsp;</td>
+ </tr>
+<tr>
+ <td height="48" valign="top">&nbsp;</td>
+ <td width="420" align="right" valign="top"><input type="text" style="background-color: #F4F4F4; border-left-color: #FFF; border-top-color: #FFF; border: 2px;" name="first_name" maxlength="50" size="36"></td>
+ </tr>
+<tr>
+ <td height="43" valign="top">&nbsp;</td>
+ <td align="right" valign="top"><input type="text" style="background-color: #F4F4F4; border-left-color: #FFF; border-top-color: #FFF; border: 2px;" name="email" maxlength="80" size="36"></td>
+ </tr>
+<tr>
+ <td height="47" valign="top">&nbsp;</td>
+ <td align="right" valign="top"><input type="text" style="background-color: #F4F4F4; border-left-color: #FFF; border-top-color: #FFF; border: 2px;" name="last_name" maxlength="50" size="36"></td>
+ </tr>
+<tr>
+  <td height="36" align="right" valign="top"><span style="text-align:right;">
+    <input type="submit" value="Submit">
+  </span></td>
+  <td align="right" valign="top"><input type="text" style="background-color: #F4F4F4; border-left-color: #FFF; border-top-color: #FFF; border: 2px;" name="telephone" maxlength="30" size="36"></td>
+ </tr>
+<tr>
+ <td height="68" colspan="2" style="text-align:center">&nbsp;</td>
+</tr>
+</tbody></table>
+</form></div></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="213"><img src="./dana2_files/nav_left.png" width="213" height="34"></td>
+    <td width="598"><table border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td><a href="http://weallseed.org/cotidianacollective/site/final/index6.php" target="_self" onclick="MM_nbGroup(&#39;down&#39;,&#39;group1&#39;,&#39;home&#39;,&#39;images/home_over.png&#39;,1)" onmouseover="MM_nbGroup(&#39;over&#39;,&#39;home&#39;,&#39;images/home_over.png&#39;,&#39;images/home_over.png&#39;,1)" onmouseout="MM_nbGroup(&#39;out&#39;)"><img src="./dana2_files/home_off.png" alt="" name="home" width="113" height="34" border="0" id="home" onload=""></a></td>
+        <td><a href="./dana2_files/dana2.html" target="_self" onclick="MM_nbGroup(&#39;down&#39;,&#39;group1&#39;,&#39;contactus&#39;,&#39;images/contactus_over.png&#39;,1)" onmouseover="MM_nbGroup(&#39;over&#39;,&#39;contactus&#39;,&#39;images/contactus_over.png&#39;,&#39;images/contactus_over.png&#39;,1)" onmouseout="MM_nbGroup(&#39;out&#39;)"><img src="./dana2_files/contactus_over.png" alt="" name="contactus" border="0" id="contactus" onload="MM_nbGroup(&#39;init&#39;,&#39;group1&#39;,&#39;contactus&#39;,&#39;images/contactus_off.png&#39;,1)"></a></td>
+        <td><a href="javascript:;" target="_top" onclick="MM_nbGroup(&#39;down&#39;,&#39;group1&#39;,&#39;aboutus&#39;,&#39;images/aboutus_over.png&#39;,1)" onmouseover="MM_nbGroup(&#39;over&#39;,&#39;aboutus&#39;,&#39;images/aboutus_over.png&#39;,&#39;images/aboutus_over.png&#39;,1)" onmouseout="MM_nbGroup(&#39;out&#39;)"><img src="./dana2_files/aboutus_off.png" alt="" name="aboutus" width="157" height="34" border="0" id="aboutus" onload=""></a></td>
+        <td><a href="javascript:;" target="_top" onclick="MM_nbGroup(&#39;down&#39;,&#39;group1&#39;,&#39;services&#39;,&#39;images/services_over.png&#39;,1)" onmouseover="MM_nbGroup(&#39;over&#39;,&#39;services&#39;,&#39;images/services_over.png&#39;,&#39;images/services_over.png&#39;,1)" onmouseout="MM_nbGroup(&#39;out&#39;)"><img src="./dana2_files/services_off.png" alt="" name="services" width="154" height="34" border="0" id="services" onload=""></a></td>
+      </tr>
+    </tbody></table></td>
+    <td width="213" height="34"><img src="./dana2_files/nav_rigth.png" width="213" height="34"></td>
+  </tr>
+</tbody></table>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="1024" height="100">&nbsp;</td>
+  </tr>
+</tbody></table>
+
+</body></html>
