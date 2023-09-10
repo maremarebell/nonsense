@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.lets-choose.com/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.lets-choose.com/index.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lets-choose.com/autism.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lets-choose.com/ADHD.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lets-choose.com/Learning-Disabilities.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lets-choose.com/parents.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lets-choose.com/educators.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lets-choose.com/about.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lets-choose.com/privacy.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+</urlset>
