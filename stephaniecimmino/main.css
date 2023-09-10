@@ -1,0 +1,102 @@
+/* http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126   License: none (public domain)*/html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
+
+/* BASIC CLASSES */
+body
+{
+	font-family: 'Josefin Slab', serif;
+	color: #e4e0e3;
+	position: relative;
+	background: #000 url('texture.png') repeat;
+}
+
+h1
+{
+	font-size: 34px;
+	line-height: 40px;
+	/*text-align: center;*/
+	font-family:'Josefin Sans', sans-serif;
+	/*text-shadow: h-shadow v-shadow blur color;*/
+	text-shadow: 4px 4px 20px #000;
+	font-weight: 700;
+	color: #e9e3e8;
+	text-align: justify;
+
+}
+h2
+{
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	font-family:'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-shadow: 4px 4px 20px #000;
+	font-weight: 700;
+	/*text-align: justify;*/
+}
+
+p
+{
+	margin: 20px 0;
+	font-size: 16px; line-height: 20px;
+	text-shadow: 4px 4px 20px #000;
+	text-align: justify;
+}
+
+a{ color:#2342b4; text-decoration: none; font-weight: bold; }
+a:hover{color:#0b6c95; text-decoration: underline;}
+a:visited{color:#1a3599;}
+
+a.button{}
+a.button
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:4px;
+	border:1px solid #84bbf3;
+	display:block;
+	color:#ffffff;
+	font-family:'Josefin Sans', sans-serif;
+	font-size:14px;
+	line-height: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding:8px 24px 6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528ecc;
+	text-align: center;
+	margin: 20px auto;
+	width: 160px;
+}
+strong{ font-weight: 700; }
+a.button:hover
+{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+}
+a.button:active
+{
+	position:relative;
+	top:1px;
+}
+
+img.hero{ position: absolute; top: -70px; left: -70px; }
+
+ul {list-style-type:disc; margin-left: 20px; margin-bottom: 6px;}
+ul li {margin: 2px 0;}
+ul li ul li {list-style-type: none;}
+
+/* REUSABLE CLASSES*/
+.clear {clear: both;}strong{font-weight: bold;}
+
+/* LAYOUT CLASSES */
+#container { margin: 200px auto; width: 344px; position: relative; }
