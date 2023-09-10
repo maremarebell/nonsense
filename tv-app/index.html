@@ -1,0 +1,244 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV App</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/foundation.css" />
+    <link rel="stylesheet" href="stylesheets/main.css" />
+
+    <script src="js/vendor/modernizr.js"></script>
+
+  </head>
+  <body>
+
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">TV App</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="has-form">
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <input type="text" placeholder="Find Stuff">
+              </div>
+              <div class="large-4 small-3 columns">
+                <a href="#" class="alert button expand">Search</a>
+              </div>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Account</a>
+            <ul class="dropdown">
+              <li><a href="#">Log out</a></li>
+              <li class="active"><a href="#">Active link in dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <!-- <li><a href="#">Left Nav Button</a></li> -->
+        </ul>
+      </section>
+    </nav>
+
+    <div class="row">
+      <div class="large-12 columns content-main">
+
+        <!-- tabbed list -->
+        <ul class="tabs" data-tab role="tablist">
+          <li class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1">to watch</a></li>
+          <li class="tab-title" role="presentation"><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">watched</a></li>
+        </ul>
+
+        <div class="tabs-content">
+          <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+            <h2>List of shows to watch</h2>
+            <dl class="button-group filters-button-group sub-nav">
+              <!-- <dt>Filter:</dt> -->
+              <dd class="active"><a href="#" data-filter="*">all</a></dd>
+              <dd><a href="#" data-filter=".started">started</a></dd>
+              <dd><a href="#" data-filter=".unstarted">unstarted</a></dd>
+            </dl>
+
+            <ul class="grid">
+              <li class="element-item started watching" data-category="started">
+                <a class="th" href="#">
+                  <img class="" src="" />
+                  <h3>Friends</h3>
+                  <p>Current progress: Season 3, Episode 13</p>
+                  <span class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-empty"></i>
+                    <i class="fa fa-star-o"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="element-item unstarted unwatched" data-category="unstarted unwatched">
+                <a class="th" href="#">
+                  <img class="" src="" />
+                  <h3>Ballers</h3>
+                  <p>Current progress: Unstarted</p>
+                  <span class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-empty"></i>
+                    <i class="fa fa-star-o"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="element-item started watching" data-category="started">
+                <a class="th" href="#">
+                  <img class="" src="" />
+                  <h3>New Girl</h3>
+                  <p>Current progress: Season 2, Episode 3</p>
+                  <span class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-empty"></i>
+                    <i class="fa fa-star-o"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+
+            <h2>List of watched shows</h2>
+
+            <dl class="button-group filters-button-group sub-nav">
+              <!-- <dt>Filter:</dt> -->
+              <dd class="active"><a href="#" data-filter="*">all</a></dd>
+              <dd><a href="#" data-filter=".watching">watching</a></dd>
+              <dd><a href="#" data-filter=".completed">completed</a></dd>
+              <dd><a href="#" data-filter=".abandoned">abandoned</a></dd>
+            </dl>
+
+            <ul class="grid">
+              <li class="element-item started watching" data-category="started">
+                <a class="th" href="#">
+                  <img class="" src="" />
+                  <h3>Friends</h3>
+                  <p>Current progress: Season 3, Episode 13</p>
+                  <span class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-empty"></i>
+                    <i class="fa fa-star-o"></i>
+                  </span>
+                </a>
+              </li>
+
+              <li class="element-item started watching" data-category="started">
+                <a class="th" href="#">
+                  <img class="" src="" />
+                  <h3>New Girl</h3>
+                  <p>Current progress: Season 2, Episode 3</p>
+                  <span class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-empty"></i>
+                    <i class="fa fa-star-o"></i>
+                  </span>
+                </a>
+              </li>
+
+              <li class="element-item abandoned" data-category="abandoned">
+                <a class="th" href="#">
+                  <img class="abandoned" src="" />
+                  <h3>Breaking Bad</h3>
+                  <p>Current progress: Never watching again | Stopped at: Season 1, Episode 4</p>
+                  <span class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-empty"></i>
+                    <i class="fa fa-star-o"></i>
+                  </span>
+                </a>
+              </li>
+
+              <li class="element-item completed" data-category="completed">
+                <a class="th" href="#">
+                  <img class="completed" src="" />
+                  <h3>Gossip Girl</h3>
+                  <p>Current progress: Completed, no more to watch :-( </p>
+                  <span class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+
+          </section>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script>
+      $(document).foundation();
+      $(document).foundation('tab', 'reflow');
+
+      $(document).foundation({
+        tab: {
+          callback : function (tab) {
+            $('.grid').isotope('layout');
+
+            // layout based on whats labeled as active
+            $('.filters-button-group:visible').find('.active').click();
+
+          }
+        }
+      });
+
+      $( function() {
+        // init Isotope
+        var $grid = $('.grid').isotope({
+          itemSelector: '.element-item',
+          layoutMode: 'fitRows'
+        });
+
+        // bind filter button click
+        $('.filters-button-group').on( 'click', 'dd', function( e ) {
+          e.preventDefault();
+          var filterValue = $( this ).find( 'a' ).attr( 'data-filter' );
+          // use filterFn if matches value
+          $grid.isotope({ filter: filterValue });
+        });
+
+        // change active class on buttons
+        $('.button-group').each( function( i, buttonGroup ) {
+          var $buttonGroup = $( buttonGroup );
+          $buttonGroup.on( 'click', 'dd', function() {
+            $buttonGroup.find('.active').removeClass('active');
+            $( this ).addClass('active');
+          });
+        });
+      });
+
+    </script>
+  </body>
+</html>
