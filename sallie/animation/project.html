@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+    ~ Copyright (c) 2011-2014 by Animatron.
+    ~ All rights are reserved.
+-->
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>&quot;Upromise 1 Copy 2&quot; by Cosgrove ny</title>
+    <meta name="description" content="">
+
+        <meta name="ad.size" content="width=988,height=499">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            top: 50%;
+            left: 50%;
+            display: block;
+            position: absolute;
+        }
+
+    </style>
+
+
+        <script type="text/javascript" src="player.js"></script>
+        <script type="text/javascript">
+            function start() {
+                var width = 988;
+                var height = 499;
+                var autoPlay = true;
+
+                var playerParams = {
+                    width: width,
+                    height: height,
+                    autoPlay: autoPlay,
+                    repeat: false,
+                    controlsEnabled: false
+                };
+                var WRAPPER_ID = 'target';
+                var wrapper = document.getElementById(WRAPPER_ID);
+
+                document.body.className = 'no-iframe';
+                wrapper.className = 'no-iframe';
+                wrapper.style.width = width + 'px';
+                wrapper.style.height = height + 'px';
+                wrapper.style.marginLeft = -Math.floor(width / 2) + 'px';
+                wrapper.style.marginTop = -Math.floor(window.innerHeight / 2) + 'px';
+
+                var filename = 'project';
+                var animation = {"meta":{"id":"05c45557d6265d773fd2ac47","created":1458160804583,"modified":1458825688008,"author":"Cosgrove ny","name":"Upromise 1 Copy 2","authorUsername":"Cosgrove.ny","description":"","duration":4.0,"numberOfScenes":1,"projectAccess":{"visibility":"PRIVATE","writeAccess":[],"readAccess":[]}},"anim":{"dimension":[988.0,499.0],"framerate":24.0,"loop":false,"paths":["AjVBy8AAABoAAAMJvDW+NEAAABoAAAT2RAEw","Kr+mgPQkITA=","Kq4SgdpPoTA=","Kr1UxL3eITA=","Kr1UxL3eMwAAEN0D","Kr1Uwtl+ITA=","KMmpCTdghMA=","Km72RR2SITA=","Km72RR2SNAAACqy4wA==","KN3sic+4hMA=","JvzuHiDaEw==","Kh3oRbAOITA=","Kh3oRbAONAAACGLIwA==","JnehHhciEw==","KnyC9mSGITA="],"background":"","elements":[[2,"Scene1",4.0,[[1,"25_dollar.png",[3.2],"",[203.0,125.0],"",4,[[0,[0.0,0.5],"",[0.0,1.0]],[0,[0.5],"",[1.0]],[4,[],"",1]]],[2,"Shape 1","",1,[269.5,199.1],"",4,[[2,[],"",[1.0,1.3]],[4,[],"",2]]],[3,"1.jpg","","",[123.0,124.0],"",4,[[4,[0.0,1.9],"",3],[4,[1.9,2.9],6,4],[4,[2.9],"",5]]],[4,"Shape 1 Copy 1","",1,[269.5,199.1],"",4,[[4,[],"",6]]],[5,"2.jpg","","",[123.0,174.0],"",4,[[4,[0.0,1.9],6,7],[4,[1.9,2.9],6,8],[4,[2.9],6,9]]],[6,"Shape 1 Copy 2","",1,[269.5,199.1],"",4,[[2,[],"",[1.0,1.28]],[4,[],"",10]]],[7,"5.jpg","","",[123.0,249.0],"",4,[[4,[0.0,1.9],"",11],[4,[1.9,2.9],6,12],[4,[2.9],"",13]]]]],[8,"6dc655578df2e9f2519cf16b.png",[406.0,250.0]],[3,"#2291ea","","",0],[8,"6bc655571db07b0196892f09.jpg",[247.0,249.0]],[3,"#2291ea","","",0],[8,"6cc6555703764c25e3793820.jpg",[247.0,349.0]],[3,"#2291ea","","",0],[8,"6cc65557e4b41f5763b60654.jpg",[247.0,499.0]],[2,"$$$LIBRARY$$$",10.0,[]]],"scenes":[0]}};
+
+                var player = anm.createPlayer(WRAPPER_ID, playerParams).load(animation, anm.importers.create('animatron'));
+            }
+
+                window.addEventListener("load", start);
+        </script>
+</head>
+<body>
+
+    <div id="target"></div>
+
+</body>
+</html>

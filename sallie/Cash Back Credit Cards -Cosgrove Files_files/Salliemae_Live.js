@@ -1,0 +1,39 @@
+
+window.optGlobal={};window.opModulesArray=[];optGlobal.run=true;optGlobal.location="Upromise >> Sallie Mae >> Global";optGlobal.hasOptimost=false;optGlobal.stagingCookie={"name":"opsel","value":"true"};optGlobal.strPath="http://by.optimost.com";if(document.location&&document.location.protocol&&document.location.protocol.toLowerCase().indexOf("https")>-1){optGlobal.strPath="https://by.essl.optimost.com/by";}
+if(typeof(optimost)=="object"&&optimost.C&&optimost.Q){optGlobal.hasOptimost=true;if(optimost.Q[optGlobal.stagingCookie.name])optimost.SC(optGlobal.stagingCookie.name,optGlobal.stagingCookie.value,null,optimost.SLD());optGlobal.isStage=optimost.Q[optGlobal.stagingCookie.name]||optimost.C[optGlobal.stagingCookie.name];}else{optGlobal.run=false;}
+optGlobal.addEvent=function(el,sEvent,fFunction,bBubble){if(!el||typeof(fFunction)!="function")return false;bBubble=bBubble||false;var sEvtType=(window.attachEvent)?"attach":(window.addEventListener)?"add":"none";if(sEvtType=="attach"){el.attachEvent("on"+sEvent,fFunction);}else if(sEvtType=="add"){el.addEventListener(sEvent,fFunction,bBubble);}};optGlobal.pause=function(ms){ms+=new Date().getTime();while(new Date()<ms){}};optGlobal.vars={};optGlobal.vars.imgArray=[];optimost.R=function(r,c,d,e){if(this.Enabled){var b=true;if(r<1000){b=(Math.floor(Math.random()*1000)<r);if(c!=null){if(this.C[c]!=null)b=(this.C[c]!="mvt-no");else this.SC(c,b?"mvt-yes":"mvt-no",e,d);}}
+if(b){var t='<'+this.ST+' src="'+this.S()+'"';for(n in this.SA)t+=(" "+n+'="'+this.SA[n]+'"');t+='><\/'+this.ST+'>';this.D.write(t);}}}
+optGlobal.classTrial=function(sTrialUrl,sModule,nThrottle,sCookie,sDomain,nExp,fAttribs,bRun){this.trialUrl=sTrialUrl;this.modules=(typeof(sModule)=="string")?[sModule]:sModule;this.cookie=sCookie||null;this.throttle=nThrottle||1000;this.expire=nExp||null;this.domain=sDomain||null;this.attribs=null;if(fAttribs){if(typeof(fAttribs)=="function"){this.attribs=fAttribs();}else if(typeof(fAttribs)=="object"){this.attribs=fAttribs;}}
+this.run=bRun||true;}
+optGlobal.executeTrialCode=function(oTrial){window.optrial=window.optrial||{};if(oTrial.attribs){optrial=oTrial.attribs;}
+if(oTrial.modules){opModulesArray=opModulesArray.concat(oTrial.modules);}
+oTrial.trialUrl=(oTrial.trialUrl.indexOf("http")==-1)?optGlobal.strPath+oTrial.trialUrl:oTrial.trialUrl;(function(){var _o=optimost;_o.U=oTrial.trialUrl;_o.ST="script";_o.SA={"type":"text/javascript"};_o.B();_o.R(oTrial.throttle,oTrial.cookie,oTrial.domain,oTrial.expire);})();}
+optGlobal.runExperiment=function(){for(var i=0;i<optGlobal.aPageTrial.length;i++){var opCurrentTrial=optGlobal.aPageTrial[i];if(opCurrentTrial.run){optGlobal.executeTrialCode(opCurrentTrial);}}
+return true;}
+optGlobal.getDTD=function(){var val="";for(var n in optimost.Q){if(n.toLowerCase()=="dtd_cell"){val=optimost.Q[n];}}
+return val.toUpperCase();}
+optGlobal.getPageId=function(){var pageId=(typeof(opPageIdentifier)=="string")?opPageIdentifier:"";window.optrial=window.optrial||{};window.optrial.opType="prospect";for(var n in optimost.C){if(n.toLowerCase()=="customer"){window.optrial.opType="customer";break;}}
+var path=document.location.pathname;if(!pageId){if(path=="/landing/dp/"){pageId="go:landing page:dp";}
+opStrHref=location.hostname+location.pathname;if((opStrHref=="www.salliemae.com/need-college-happen02/")||(opStrHref=="www.salliemae.com/lets-make-happen03/")){pageId="SM1: Home"}
+if(opStrHref.indexOf("www.salliemae.com/plan-for-college/")>=0){pageId="SM1: Plan_For_College"}
+if((document.location.href.indexOf("https://apply.salliemae.com/Apply")>=0)&&(document.location.href.indexOf("AppMode=SLM")>=0)){pageId="SM1: General_Information_-_Borrower"}
+if(document.location.href.indexOf("www.salliemae.com/plan-for-college/registration/confirmation.aspx")>=0){pageId="SM1: Registration Confirmed"}}
+return pageId;}
+optGlobal.strPage=optGlobal.getPageId();optGlobal.dtd=optGlobal.getDTD();optGlobal.attribsDTD=function(){var dtd=optGlobal.getDTD();var obj={};var val="";var map_dtd={"IQMS":"IQMS","IQGO":"IQGO","SEMBG":"SEMBG","SEMGO":"SEMGO","SEMBM":"SEMBM","SMPCSODCZPPEOAOTOTHOTHRN":"SMPCSODCZPPEOAOTOTHOTHRN","SMPCSODCZPPEAOOTOTHOTHRN":"SMPCSODCZPPEAOOTOTHOTHRN","SMPCSODCZPPEALOTOTHOTHRN":"SMPCSODCZPPEALOTOTHOTHRN","SMCSSODCZCECSD":"SMCSSODCZCECSD","SMCSSODCZCECSF":"SMCSSODCZCECSF"}
+if(dtd){for(var id in map_dtd){if(dtd.indexOf(id)==0){val=map_dtd[id];break;}}}
+if(val){obj.opPageView=val;}
+return obj;}
+optGlobal.getScreenRes=function(){var w=(typeof(screen)!="undefined")?parseInt(screen.width):"";window.optrial=window.optrial||{};if(w){if(w<=640){optrial.opResolution="640";}else if(w<=1023){optrial.opResolution="641_1023";}else{optrial.opResolution="1024";}}
+return w;}
+optGlobal.getCustomerCookie=function(){window.optrial=window.optrial||{};if(typeof opPageIdentifier!="undefined"){if(opPageIdentifier.toLowerCase().indexOf('customer')>=0){optrial.opUser="cookied";}else{optrial.opUser="noncookied";}}
+return;};optGlobal.runHomeTest=function(){var cname="opEntry";var cook=optimost.Q[cname]||optimost.C[cname]||"";var entry="";var run=false;if(optGlobal.strPage=="SM1: Home"||optGlobal.strPage=="SM1: Home B"){var ref=document.referrer||"";if(cook=="home"){entry="home";}else if(!cook&&ref.indexOf("salliemae.com")==-1&&!optGlobal.dtd){entry="home";}
+if(entry=="home"){run=true;}}else{if(cook!=="home"){entry="other";}}
+if(entry){optimost.SC(cname,entry,86400,optimost.SLD());}
+return run;}
+optGlobal.objTrials={};optGlobal.setTrials=function(){var res=optGlobal.getScreenRes();optGlobal.objTrials["SM1:student loans smart option student loan"]=new optGlobal.classTrial("/counter/568/-/18/event.js");optGlobal.objTrials["SM1:student loans:undergraduate:SOSL"]=new optGlobal.classTrial("/counter/568/-/127/event.js");optGlobal.objTrials["SM1: General_Information_-_Borrower"]=new optGlobal.classTrial("/counter/568/-/147/event.js");optGlobal.objTrials["SM|OLA|Application Status"]=new optGlobal.classTrial("/counter/568/-/148/event.js");optGlobal.objTrials["SM1: Registration Confirmed"]=new optGlobal.classTrial("/counter/568/-/149/event.js");optGlobal.objTrials["SM1: Plan_For_College"]=new optGlobal.classTrial("/counter/568/-/150/event.js");optGlobal.objTrials["SM|Student Loans|Parents|Parent Loan"]=new optGlobal.classTrial("/counter/568/-/163/event.js");if(res){var notExcluded=true;var arExclude=["SMPCSODCZPPEOAOTOTHOTHRN","SMPCSODCZPPEAOOTOTHOTHRN","SMPCSODCZPPEALOTOTHOTHRN","SMCSSODCZCECSD","SMCSSODCZCECSF"];for(var i=0;i<arExclude.length;++i){if(optGlobal.dtd.toLowerCase().indexOf(arExclude[i].toLowerCase())===0||document.location.pathname.indexOf('nvdp')>-1){notExcluded=false;break;}}
+if(notExcluded){optGlobal.objTrials["go:landing page:dp"]=new optGlobal.classTrial("/trial/568/p/sosldtcdeferredlandingpage.6b1/51/content.js","landing_deferred");}}
+var opStrHref=location.hostname+location.pathname;if(opStrHref=="www.salliemae.com/"||opStrHref=="www.salliemae.com/need-college-happen02/"||opStrHref=="www.salliemae.com/lets-make-happen03/"){optGlobal.objTrials["SM1: Home"]=new optGlobal.classTrial("/trial/568/p/homepage1.ec6/20/content.js","body");optGlobal.objTrials["SM1: Home-Customer"]=new optGlobal.classTrial("/trial/568/p/homepage1.ec6/20/content.js","body");optGlobal.objTrials["SM: Home-Customer"]=new optGlobal.classTrial("/trial/568/p/homepage1.ec6/20/content.js","body");}}
+if(optGlobal.run){optGlobal.setTrials();optGlobal.aPageTrial=[];if(optGlobal.objTrials[optGlobal.strPage]){if(optGlobal.objTrials[optGlobal.strPage].length){optGlobal.aPageTrial=optGlobal.aPageTrial.concat(optGlobal.objTrials[optGlobal.strPage]);}else{optGlobal.aPageTrial.push(optGlobal.objTrials[optGlobal.strPage]);}}
+if(optGlobal.aPageTrial.length>0){optGlobal.runExperiment();}}
+var opContentUrls=["a"];var opCounterPagesUrls=new Array();var opCountersUrls=new Array();function opRunCounters(){}
+function opFiringCounters(val){}
