@@ -1,0 +1,854 @@
+$white: #ffffff
+$black: #000000
+
+$tan: #f8f7f2
+$tan-darker: #f4f2e9
+
+$purple-light: #ffc4f7
+$purple: #a7268e
+$purple-dark: #51318c
+$purple-text: #50308d
+$purple-lightest: #fae9f4
+$purple-random: #c5bbd4
+$purple-random2: #a595c5
+
+$gray: #808080
+$gray-darker: #464646
+
+$pink-light: #eebddd
+
+html
+  box-sizing: border-box
+
+*, *:before,
+*:after
+  box-sizing: inherit
+
+// todo: add light and regular files
+$helvetica-neue-roman:'helvetica-neue-roman', 'helvetica neue', Helvetica, sans-serif
+
+$helvetica-neue-light: 'helvetica neue', Helvetica, sans-serif
+$helvetica-neue-regular: 'helvetica neue', Helvetica, sans-serif
+$helvetica-neue-medium: 'helvetica-neue-medium', 'helvetica neue', Helvetica, sans-serif
+$helvetica-neue-bold: 'helvetica-neue-bold', 'helvetica neue', Helvetica, sans-serif
+
+@font-face
+  font-family: "helvetica-neue-roman"
+  src: url("../fonts/helvetica_neue_roman.eot")
+  src: url("../fonts/helvetica_neue_roman.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_roman.woff") format("woff"), url("../fonts/helvetica_neue_roman.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "helvetica-neue-medium"
+  src: url("../fonts/helvetica_neue_med.eot")
+  src: url("../fonts/helvetica_neue_med.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_med.woff") format("woff"), url("../fonts/helvetica_neue_med.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "helvetica-neue-bold"
+  src: url("../fonts/helvetica_neue_bold.eot")
+  src: url("../fonts/helvetica_neue_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_bold.woff") format("woff"), url("../fonts/helvetica_neue_bold.ttf") format("truetype")
+  font-weight: bold
+  font-style: normal
+
+@font-face
+  font-family: "helvetica-stretched"
+  src: url("../fonts/helvetica_neue_stretched.eot")
+  src: url("../fonts/helvetica_neue_bold.stretched?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_stretched.woff") format("woff"), url("../fonts/helvetica_neue_stretched.ttf") format("truetype")
+  font-weight: bold
+  font-style: normal
+
+section
+  clear: both
+  overflow: hidden
+
+.container-fluid
+  padding-left: 0
+  padding-right: 0
+  max-width: 1140px
+
+body
+  position: relative
+  z-index: 1
+
+h2
+  color: $purple-text
+  margin: 0
+  margin-bottom: 10px
+  text-transform: uppercase
+  font: 700 36px/1em $helvetica-neue-bold
+
+p
+  font-family: $helvetica-neue-roman
+
+p.lead
+  width: 78%
+  margin: 26px auto
+  font: 400 18px/24px $helvetica-neue-roman
+  text-align: center
+
+  strong
+    font-family: $helvetica-neue-bold
+    color: $purple-text
+
+.button-group
+  text-align: center
+  position: relative
+  margin-top: 6px
+
+  .btn.btn-apply
+    height: 50px
+    width: 280px
+
+  .btn.btn-apply
+    background-color: $purple
+    color: #ffffff
+    text-transform: uppercase
+    font: 700 20px/1em $helvetica-neue-bold
+    display: inline-block
+    border-radius: 5px
+    padding: 14px 0 14px 0
+    text-align: center
+    position: relative
+    z-index: 1
+    margin-top: 6px
+    margin-bottom: 6px
+
+    &:hover, &:focus
+      color: #ffffff
+      background-color: $purple
+      outline: 0
+
+  .btn-shadow
+    border-radius: 10px
+    background-color: $purple-dark
+    position: absolute
+    display: inline-block
+
+  small
+    display: block
+    text-align: center
+    font: 300 19px $helvetica-neue-roman
+    padding: 6px 0 0 0
+    color: #808080
+
+    &.smaller
+      font-size: 16px
+      color: #949393
+
+.button-group.button-group-mobile
+  margin-top: -42px
+
+//////////
+// NAV  //
+//////////
+.navbar.navbar-default
+  background-color: $white
+  border-width: 0
+  left: 0
+  top: 0
+  border-radius: 0
+  width: 100%
+  z-index: 4
+
+  .navbar-header
+    height: 80px
+
+  .navbar-brand
+    padding-top: 14px
+    width: auto
+    height: auto
+
+    img
+      width: 188px
+      display: inline-block
+      margin-right: 10px
+
+  ul.nav.navbar-nav
+    text-align: right
+
+    > li > a
+      font: 400 15px/19px $helvetica-neue-regular
+      color: $gray-darker
+      text-transform: uppercase
+      height: 80px
+      padding: 30px 18px
+      letter-spacing: 1px
+
+      &:hover
+        background-color: transparent
+
+      &:active,
+      &:focus
+        border-width: 0
+        outline: 0
+
+  .navbar-right .btn-apply
+    margin-top: 20px
+    marging-bottom: 20px
+
+section
+  ////////////
+  // HERO   //
+  ////////////
+  &.page-hero
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6d9ec+0,ffffff+100 */
+    background: rgb(246,217,236)
+    background: -moz-linear-gradient(top,  rgba(246,217,236,1) 0%, rgba(255,255,255,1) 100%)
+    background: -webkit-linear-gradient(top,  rgba(246,217,236,1) 0%,rgba(255,255,255,1) 100%)
+    background: linear-gradient(to bottom,  rgba(246,217,236,1) 0%,rgba(255,255,255,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6d9ec', endColorstr='#ffffff',GradientType=0 )
+
+    height: 448px
+    padding-top: 80px
+    color: $white
+    border-bottom: 3px solid #edeaf3
+
+    .hero-card
+      text-align: center
+      padding-left: 0
+      padding-right: 0
+      padding-top: 20px
+
+      img
+        max-width: 742px
+        display: inline-block
+        width: 742px
+        margin-left: -72px
+
+    .hero-headline
+      text-align: center
+      padding-top: 40px
+      padding-left: 0
+      padding-right: 0
+
+    h1
+      color: $purple-text
+      font: 400 46px/1em 'helvetica-stretched'
+      text-transform: uppercase
+      letter-spacing: 1px
+      margin-bottom: 4px
+
+      small
+        display: block
+        color: $purple-text
+        font: 100 30px/1em $helvetica-neue-light
+        text-transform: none
+        letter-spacing: 1px
+        margin-bottom: 14px
+
+    p
+      color: $purple-text
+      font: 400 19px/1.2em $helvetica-neue-roman
+      margin-bottom: 30px
+
+  ////////////////////
+  // HERO BENEFITS  //
+  ////////////////////
+  &.page-herobenes
+    background-color: $tan
+
+    .bene
+      text-align: center
+      padding: 40px 10px
+      position: relative
+
+    h2
+      font: 24px/26px $helvetica-neue-bold
+      color: $purple-text
+      height: 54px
+
+    p
+      font: 19px/24px $helvetica-neue-roman
+      margin: 0
+      color: $black
+
+    .bene-companion
+      width: 30%
+      padding-left: 20px
+      padding-right: 20px
+
+    .bene-bag
+      width: 41%
+      padding-left: 20px
+      padding-right: 20px
+
+    .bene-miles
+      width: 29%
+      padding-left: 20px
+      padding-right: 0
+
+    .bene-companion,
+    .bene-bag
+      &:before
+        content: ''
+        height: 240px
+        width: 1px
+        background-color: $white
+        position: absolute
+        right: 0
+        top: 8px
+
+  ////////////////////
+  // MORE BENEFITS  //
+  ////////////////////
+  &.page-morebenes
+    padding: 60px 0 80px 0
+
+    h2
+      color: $purple-text
+      text-align: center
+      margin-bottom: 54px
+
+    .box
+      border: 2px solid $purple-lightest
+      padding: 40px
+
+    ul
+      list-style-type: none
+      margin-left: 0
+      padding-left: 0
+
+      li
+        text-align: center
+        height: 260px
+        margin-bottom: 20px
+
+        img
+          display: block
+          clear: both
+          width: 100px
+          margin: auto
+          opacity: .7
+
+        strong
+          font: 700 24px/40px $helvetica-neue-bold
+          font-weight: bold
+
+        p
+          font: 400 18px/28px $helvetica-neue-roman
+          margin: auto
+          padding: 6px 40px
+
+    //.li-tickets,
+    //.li-gift
+      height: 220px
+
+    .row-special
+      ul
+        margin-top: -60px
+
+      // ul li
+        height: 180px
+
+  /////////////////////////
+  // FEES AND TRANSFERS  //
+  /////////////////////////
+  &.page-transfers
+    padding: 54px 0 42px 0
+    background-color: $tan
+
+    h2
+      text-align: center
+      display: block
+      margin: auto
+
+      &:after
+        content: ''
+        position: relative
+        height: 1px
+        width: 130px
+        background-color: $purple-random
+        display: block
+        clear: both
+        margin: auto
+        margin-top: 10px
+
+    p
+      width: 84%
+      margin: 26px auto
+      font: 400 18px/24px $helvetica-neue-roman
+      text-align: center
+
+      strong
+        font-family: $helvetica-neue-bold
+        color: $purple-text
+
+    p.p-annual-fee
+      margin-bottom: 14px
+
+    .button-group
+      small
+        color: $gray
+
+  ///////////////////
+  // DESTINATIONS  //
+  ///////////////////
+  &.page-destinations
+    padding: 60px 0 120px 0
+
+    h2
+      text-align: center
+      display: block
+      margin: auto
+      margin-bottom: 30px
+
+      &:after
+        content: ''
+        position: relative
+        height: 1px
+        width: 130px
+        background-color: $purple-random2
+        display: block
+        clear: both
+        margin: auto
+        margin-top: 10px
+
+    p.lead
+      margin-bottom: 60px
+
+    .destination
+      margin: 0!important
+      padding: 0!important
+
+      img
+        width: 100%
+
+      > div
+        background-color: $purple
+        color: #ffffff
+        text-transform: uppercase
+        text-align: center
+        font: 700 18px/24px $helvetica-neue-bold
+        -moz-box-shadow: inset 0 0 50px #7f1763
+        -webkit-box-shadow: inset 0 0 50px #7f1763
+        box-shadow: inset 0 0 50px #7f1763
+        padding: 22px 0px
+
+////////////
+// FOOTER //
+////////////
+footer.page-footer
+  background-color: $tan-darker
+  padding: 60px 0
+  font: 400 15px/18px $helvetica-neue-roman
+  color: $gray-darker
+
+  strong
+    font: 700 15px/1.4em $helvetica-neue-bold
+
+  a
+    text-decoration: underline
+    color: $gray-darker
+
+  p
+    margin-bottom: 16px
+
+    sup
+      font: inherit
+      vertical-align: inherit
+      top: auto
+
+  // links at the top
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    margin-bottom: 12px
+    display: block
+    clear: both
+    overflow: hidden
+    margin-left: -10px
+
+    li
+      float: left
+      padding: 10px
+
+@media only screen and (max-device-width: 1200px), (max-width: 1200px)
+  // Stuff that needs to change per breakpoint
+  .container-fluid
+    padding-right: 10px
+    padding-left: 10px
+
+  // FONT SIZES
+  section.page-hero .hero-card img
+    margin-top: 20px
+    width: 140%
+    margin-left: -12%
+
+  section.page-hero h1
+    font-size: 40px
+
+@media only screen and (max-device-width: 991px), (max-width: 991px)
+  // Remove weird padding
+  section.page-herobenes .bene-companion,
+  section.page-herobenes .bene-bag,
+  section.page-herobenes .bene-miles
+    padding: 20px 10px
+
+  section.page-destinations .destination > div
+    font-size: 14px
+
+  // undo a bootstrap default
+  .navbar>.container .navbar-brand,
+  .navbar>.container-fluid .navbar-brand
+    margin-left: 0!important
+
+  .navbar.navbar-default .navbar-brand img
+    width: 140px
+
+  // FONT SIZES
+  section h2
+    font-size: 26px
+    line-height: 1.2em
+    margin-bottom: 30px
+
+  section p.lead
+    font-size: 15px
+
+  section.page-hero h1
+    font-size: 30px
+    line-height: 1.4em
+    margin-bottom: 2px
+
+  section.page-hero h1 small
+    font-size: 20px
+    line-height: 1.4em
+    margin-bottom: 6px
+
+  section.page-hero p
+    font-size: 14px
+    line-height: 1.4em
+
+  section.page-herobenes h2
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 0px
+
+  section.page-herobenes p
+    font-size: 12px
+    line-height: 20px
+    line-height: 1.4em
+
+  section.page-morebenes ul li strong
+    font-size: 20px
+    line-height: 1.4em
+
+  section.page-morebenes ul li p
+    font-size: 16px
+    line-height: 22px
+
+////////////////////
+// MOST MOBILE    //
+////////////////////
+@media only screen and (max-device-width: 767px), (max-width: 767px)
+  .container-fluid
+    padding-left: 10px
+    padding-right: 10px
+
+  // undoes a bootstrap default
+  .navbar
+    margin-bottom: 0!important
+
+  .navbar.navbar-default
+    background-color: #ffffff
+    position: fixed
+    box-shadow: 0px 0px 10px $gray
+
+    .navbar-header
+      float: none
+      height: 60px
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+
+      .navbar-brand
+        padding: 12px 0
+
+        img
+          width: 120px
+
+    .navbar-left,
+    .navbar-right
+      float: none !important
+
+    .navbar-toggle
+      margin: 0
+      display: block
+      border-width: 0
+      width: auto
+      padding: 10px
+      background-color: transparent
+      margin-top: 10px
+      margin-right: -14px
+
+      .icon-bar
+        height: 3px
+        margin-bottom: 5px
+        background-color: #424242
+        width: 30px
+
+        &:last-child
+          margin-bottom: 0
+
+      &:focus,
+      &:hover
+        background-color: transparent
+
+      &:focus .icon-bar,
+      &:hover .icon-bar
+        background-color: $purple
+
+    .navbar-collapse
+      border-top: 1px solid transparent
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+      max-height: 216px !important
+
+    .navbar-nav
+      float: none !important
+      margin-top: 7.5px
+
+      > li
+        float: none
+        border-top: 1px solid #d9d9d9
+
+    ul.nav.navbar-nav > li > a
+      padding-top: 10px
+      padding-bottom: 10px
+      height: auto
+      text-align: left
+      color: $gray-darker
+
+    .container-fluid > .navbar-collapse
+      margin-left: -15px
+      margin-right: -15px
+      width: 100%
+      margin: 0
+
+  section
+    border-top: 1px solid $pink-light
+    border-width: 1px 0 0 0
+
+    h2
+      margin-bottom: 30px
+
+  section.page-hero
+    margin-top: 0
+    margin-top: 60px
+    padding-top: 0
+    height: auto
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6d9ec+0,ffffff+20 */
+    background: rgb(246,217,236)
+    background: -moz-linear-gradient(top,  rgba(246,217,236,1) 0%, rgba(255,255,255,1) 20%)
+    background: -webkit-linear-gradient(top,  rgba(246,217,236,1) 0%,rgba(255,255,255,1) 20%)
+    background: linear-gradient(to bottom,  rgba(246,217,236,1) 0%,rgba(255,255,255,1) 20%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6d9ec', endColorstr='#ffffff',GradientType=0 )
+    border-bottom-width: 0
+
+    .container-fluid
+      padding: 0
+      margin: 0
+
+    .hero-headline
+      padding: 0
+      margin: 0
+      padding-top: 0
+      padding: 24px 10px
+      padding-bottom: 0
+
+      h1
+        margin-top: 0
+
+      img
+        margin-top: 0
+
+    .hero-card
+      margin-top: 0
+      padding-top: 0
+
+      img
+        margin-left: 0
+        width: 90%
+        margin-top: -50px
+
+  section.page-herobenes
+    padding: 30px 0
+
+    h2
+      height: auto
+      margin-bottom: 10px
+
+    .bene
+      width: 100%
+      margin-bottom: 20px
+      padding-left: 14px
+      padding-right: 14px
+      height: auto
+
+      &:before
+        display: none
+
+      &:last-child
+        margin-bottom: 0
+
+  section.page-morebenes
+    padding: 30px 0
+
+    h2
+      height: auto
+
+    .row-special ul
+      margin-top: 0
+
+    ul li,
+    .li-tickets,
+    .li-gift,
+    .row-special ul li
+      height: auto
+      padding: 0
+
+      img
+        width: 70px
+
+      p
+        padding: 0
+
+    .box
+      margin: 0
+      padding: 0
+      border-width: 0
+
+  section.page-transfers
+    padding: 30px 0 6px 0
+
+    h2:after
+      display: none
+
+    p.lead
+      width: 100%
+
+  section.page-destinations
+    padding: 30px 0 0 0
+
+    .container-fluid
+      padding-left: 0
+      padding-right: 0
+
+    h2:after
+      display: none
+
+    p.lead
+      margin-bottom: 30px
+      width: 100%
+
+    .destination
+      width: 50%
+
+  footer.page-footer
+    padding: 30px 0
+    font-size: 12px
+
+  .button-group.button-group-mobile
+    margin-bottom: 24px
+
+////////////////////
+// SMALLEST SIZE  //
+////////////////////
+@media only screen and (max-device-width: 480px), (max-width: 480px)
+  section.page-hero
+    height: auto
+
+    .hero-card
+      margin-top: 0
+
+      img
+        margin-top: 0
+
+    p
+      margin-bottom: 0
+
+  section.page-hero .hero-card img
+    width: 120%
+    margin-left: -10%
+
+  .button-group.button-group-mobile
+    margin-top: -22px
+
+  section.page-destinations
+    .destination
+      width: 100%
+      clear: both
+
+  // Stuff that transitions more fluidly
+
+  // FONT SIZES
+  section h2
+    font-size: 24px
+    line-height: 26px
+    margin-bottom: 30px
+
+  section p.lead
+    font-size: 15px
+
+  section.page-hero h1
+    font-size: 20px
+    line-height: 1.4em
+    margin-bottom: 6px
+
+  section.page-hero h1 small
+    font-size: 15px
+    line-height: 1.4em
+    margin-bottom: 6px
+
+  section.page-hero p
+    font-size: 13px
+    line-height: 1.4em
+
+  section.page-herobenes h2
+    font-size: 20px
+    line-height: 1.1em
+    margin-bottom: 0px
+
+  section.page-herobenes p
+    font-size: 16px
+    line-height: 1.4em
+
+  section.page-morebenes ul li strong
+    font-size: 20px
+    line-height: 1.4em
+
+  section.page-morebenes ul li p
+    font-size: 16px
+    line-height: 1.4em
+
+  footer.page-footer,
+  footer.page-footer strong
+    font-size: 12px
+    line-height: 17px
+
+  // CARD SIZE
+  section.page-hero .hero-card img
+
+////////////////////
+// SMALLEST SIZE  //
+////////////////////
+@media only screen and (max-device-width: 320px), (max-width: 320px)
+
+footer .container-fluid
+  position: relative
+
+footer.page-footer img.logo.pull-right
+  position: absolute
+  right: 0
+  top: -28px
+  width: 220px
+
+@media only screen and (max-device-width: 767px), (max-width: 767px)
+  footer.page-footer img.logo.pull-right
+    position: relative
+    clear: both
+    margin: auto
+    top: auto
+    width: 220px
