@@ -1,0 +1,965 @@
+@import "compass";
+@import "compass/utilities/general/clearfix";
+
+// Colors
+$white: #ffffff;
+$navy: #085da9;
+$cornflower: #3c74bd;
+$cerulean: #096bc2;
+$sky: #018fd0;
+$baby: #aedef0;
+$charcoal: #404040;
+$dust: #848789;
+$elephant : #b7b8ba;
+$cloudy: #e8e8e8;
+$offwhite: #ededed;
+
+// Fonts
+@font-face {
+  font-family: "barclaycard_co_ltregular";
+  src: url("../fonts/barclaycardco_lt-webfont.eot");
+  src: url("../fonts/barclaycardco_lt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/barclaycardco_lt-webfont.woff") format("woff"), url("../fonts/barclaycardco_lt-webfont.ttf") format("truetype"), url("../fonts/barclaycardco_lt-webfont.svg#barclaycard_co_ltregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "barclaycard_coregular";
+  src: url("../fonts/barclaycardco_rg-webfont.eot");
+  src: url("../fonts/barclaycardco_rg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/barclaycardco_rg-webfont.woff") format("woff"), url("../fonts/barclaycardco_rg-webfont.ttf") format("truetype"), url("../fonts/barclaycardco_rg-webfont.svg#barclaycard_coregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+// todo: add to these chains
+$font-regular: "barclaycard_coregular";
+$font-light: "barclaycard_co_ltregular";
+
+body {
+  font-family: $font-light;
+  background-color: $white;
+}
+
+.bg {
+  height: 260px;
+  background-color: $dust;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.bg--cash {
+  background: url('../images/bg-cash.jpg') center bottom no-repeat;
+}
+
+.bg--plus {
+  background: url('../images/bg-plus.jpg') center bottom no-repeat;
+}
+
+.bg--ring {
+  background: url('../images/bg-ring.jpg') center bottom no-repeat;
+}
+
+.nav-main {
+  z-index: 99;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.nav__logo {
+  float: left;
+  padding: 31px;
+  width: auto;
+}
+
+.nav__logoimg {
+  width: 170px;
+  display: block;
+}
+
+.nav__links {
+  float: right;
+}
+
+.nav__item {
+  padding: 34px;
+  display: inline-block;
+  position: relative;
+}
+
+.nav__link {
+  font-family: $font-light;
+  font-size: 18px;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $baby;
+  }
+}
+
+.nav__link--dark {
+  color: $sky;
+}
+
+
+//
+// MENU DROPDOWN
+//
+
+.drop {
+  background-color: $navy;
+  position: absolute;
+  top: 88px;
+  right: 0;
+  z-index: 100;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  max-height: 0;
+}
+
+.nav__item:hover {
+  .drop {
+    display: block;
+    max-height: 580px;
+    overflow-y: visible;
+  }
+
+  .drop:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 64px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $navy;
+  }
+}
+
+.drop__item {
+  border-top: 1px solid $cornflower;
+  text-align: center;
+
+  &:first-child {
+    border-width: 0;
+  }
+}
+
+.drop__link {
+  display: block;
+  padding: 26px 72px;
+  color: $baby;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+
+  &:hover {
+    color: $white;
+    background-color: $cerulean;
+  }
+}
+
+.drop__title {
+  margin-bottom: 14px;
+}
+
+.drop__img {
+  display: inline-block;
+}
+
+.jumbo__header {
+  font-family: $font-light;
+  font-size: 45px;
+  color: $white;
+  height: 140px;
+}
+
+.jumbo__header--ring {
+  color: $sky;
+}
+
+
+//
+// CAROUSEL
+//
+
+.carousel {
+  // background-color: $white;
+}
+
+
+//
+// ALL CARDS
+//
+
+// Hidden for fade ins
+.card {
+  .card__title,
+  .card__benes,
+  .btn--learnmore,
+  .card__img,
+  .card__details {
+    opacity: 0;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  opacity: 0;
+}
+
+.card__title,
+.card__benes {
+  display: none;
+}
+
+.card {
+  width: 25%;
+  float: left;
+  text-align: center;
+  // margin-top: -44px;
+}
+
+.card__img {
+  display: block;
+  width: 520px;
+  margin: auto;
+  max-width: 100%;
+  margin-top: 76px;
+}
+
+.card__title {
+  color: $sky;
+  font-size: 32px;
+  text-align: center;
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-top: 14px;
+}
+
+.card__name {
+  color: $dust;
+
+  sup {
+    font-size: .4em;
+    vertical-align: text-top;
+  }
+}
+
+
+//
+// ACTIVE CARD
+//
+
+.slick-list {
+  margin-top: -60px!important;
+}
+
+.card.slick-current {
+  .card__title,
+  .card__benes,
+  .btn--learnmore {
+    opacity: 1;
+  }
+
+  .card__img {
+    width: 648px;
+    margin-top: 0;
+  }
+
+  .card__benes {
+    display: block;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 26%;
+  display: block;
+  width: 43px;
+  height: 81px;
+  margin-top: -10px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-next {
+  background-image: url(../images/icon-next.png);
+  right: 22%;
+}
+
+.slick-prev {
+  background-image: url(../images/icon-prev.png);
+  left: 22%;
+}
+
+
+//
+// LOADER
+//
+
+.loader {
+  width: 100%;
+  height: 6px;
+  background-color: $white;
+  display: block;
+}
+
+.loader__bar {
+  background-color: $sky;
+  width: 0%;
+  height: 100%;
+  display: block;
+}
+
+
+//
+// SECONDARY NAV
+//
+
+.navsec {
+  height: 124px;
+  background-color: $white;
+  text-align: center;
+}
+
+.navsec--fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  border-bottom: 1px solid $cloudy;
+  // box-shadow: 0px -2px 14px 4px #d0d0d0;
+}
+
+.navsec__item {
+  display: inline-block;
+}
+
+.navsec__link {
+  height: 124px;
+  padding: 26px;
+  width: 180px;
+  font-size: 16px;
+  color: $dust;
+  text-align: center;
+  display: block;
+
+  &:hover {
+    color: $dust;
+  }
+}
+
+.navsec__icon {
+  margin: auto;
+  display: block;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.navsec__item--selected,
+.navsec__item.active {
+  .navsec__link,
+  .navsec__link:hover {
+    color: $sky;
+  }
+}
+
+
+//
+// LEARN MORE BUTTON
+//
+
+.btn--learnmore {
+  background-color: $navy;
+  font-size: 20px;
+  padding: 20px 80px;
+  display: inline-block;
+  border-radius: 40px;
+  color: $white;
+  letter-spacing: .5px;
+
+  &:hover {
+    background-color: $cerulean;
+    cursor: pointer;
+  }
+}
+
+
+//
+// SECTIONS
+//
+
+.section {
+  border-top: 1px solid $cloudy;
+  // Needs latest Compass, add '@import "compass"' to your scss
+  // Permalink - use to edit and share this gradient:
+  // http://colorzilla.com/gradient-editor/#ebebeb+0,ffffff+100
+  background-color: #ebebeb; // Old browsers
+  @include filter-gradient(#ebebeb, #ffffff, vertical); // IE6-9
+  @include background-image(linear-gradient(top, #ebebeb 0%,#ffffff 100%));
+  padding: 80px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section--selected {
+  background-color: $white;
+  @include filter-gradient($white, $white, vertical); // IE6-9
+  @include background-image(linear-gradient(top, $white 0%, $white 100%));
+}
+
+.copy,
+.newhero {
+  width: 50%;
+  text-align: center;
+}
+
+.copy--right {
+  float: right;
+}
+
+.copy--left {
+  float: left;
+}
+
+.newhero--left {
+  float: left;
+}
+
+.newhero--right {
+  float: right;
+}
+
+.newhero__img {
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.copy__cardname {
+  font-size: 18px;
+  line-height: 18px;
+  color: $dust;
+  margin-bottom: 14px;
+
+  sup {
+    font-size: 10px;
+    line-height: 10px;
+    margin-left: 2px;
+  }
+}
+
+.copy__headline {
+  color: $sky;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.copy__details {
+  color: $dust;
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 40px;
+}
+
+.footer {
+  @include clearfix;
+  padding: 30px;
+  background-color: $offwhite;
+}
+
+
+//
+// FOOTER
+//
+
+.footer__left {
+  width: 50%;
+  float: left;
+}
+
+.footer__links {
+  margin-bottom: 10px;
+}
+
+.footer__item {
+  display: inline-block;
+  margin-right: 14px;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.footer__link {
+  color: $charcoal;
+}
+
+.footer__copyright {
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.footer__social {
+  float: right;
+  font-size: 40px;
+
+  a {
+    color: $sky;
+    margin: 0 20px;
+  }
+}
+
+
+//
+// CARD BENEFITS
+//
+
+.card__benes {
+  width: 200%;
+  margin-left: -50%;
+  text-align: center;
+  padding: 36px 0;
+  height: 140px;
+}
+
+.card__bene {
+  display: block;
+  float: left;
+  text-align: center;
+  position: relative;
+
+  &:after {
+    background-color: $elephant;
+    content: '';
+    width: 1px;
+    height: 46px;
+    position: absolute;
+    top: 30%;
+    right: 1px;
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.cardbene__headline {
+  color: $sky;
+  display: block;
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 12px;
+}
+
+.cardbene__subhead {
+  color: $dust;
+  display: block;
+  font-size: 20px;
+}
+
+
+//
+// CARD SPECIFIC LEARN MORE
+//
+
+.card .btn--learnmore {
+  margin: 16px 0 54px;
+}
+
+
+//
+// RING SPECIFIC CARD BENEFITS
+//
+
+.card--ring .cardbene__headline {
+  margin-top: 22px;
+}
+
+//
+// BENE COL SIZES
+//
+
+.card--cash {
+  .card__bene--1 { width: 32%; }
+  .card__bene--2 { width: 36%; }
+  .card__bene--3 { width: 32%; }
+}
+
+.card--plus {
+  .card__bene--1 { width: 33%; padding-left: 8%; }
+  .card__bene--2 { width: 34%; }
+  .card__bene--3 { width: 33%; }
+}
+
+.card--ring {
+  .card__bene--1 { width: 33%; }
+  .card__bene--2 { width: 34%; }
+  .card__bene--3 { width: 33%; padding-right: 8%; }
+}
+
+
+//
+// MOBILE NAV
+//
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav__item {
+  display: none;
+}
+
+.mobile-nav__item {
+  font-size: 14px;
+  padding: 14px;
+}
+
+.mobile-nav__link {
+  color: $white;
+  text-decoration: none;
+}
+
+.mobile-nav__header {
+  color: $baby;
+  padding-bottom: 8px;
+  border-top: 1px solid $cerulean;
+}
+
+.mobile-nav {
+
+  background-image: url('../images/icon-hamburger.png');
+  height: 22px;
+  width: 27px;
+  float: right;
+  display: block;
+  margin: 10px;
+
+  .mobile-nav__item {
+    display: none;
+  }
+}
+
+.mobile-nav:hover {
+  background-image: none;
+  height: auto;
+  width: 100%;
+  float: right;
+  margin: 0;
+  background-color: $sky;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  .mobile-nav__item {
+    display: block;
+  }
+}
+
+
+//
+// Other mobile stuff
+//
+
+.card__title {
+  display: block;
+}
+
+.card__title--mobile {
+  display: none;
+}
+
+.card.slick-current .btn--learnmore {
+  display: inline-block;
+}
+
+.card.slick-current .btn--learnmore--mobile {
+  display: none;
+}
+
+// ------------------------------------------- //
+// ------------------------------------------- //
+// RESPONSIVE CSS
+// ------------------------------------------- //
+// ------------------------------------------- //
+
+@media only screen and (max-device-width: 1500px), (max-width: 1500px) {
+
+  .card__title { font-size: 20px; }
+
+  .cardbene__headline { font-size: 24px; line-height: 28px; }
+  .cardbene__subhead { font-size: 18px; line-height: 22px; }
+
+  .card__img { width: 440px; margin-top: 56px; }
+  .card.slick-current .card__img { width: 540px; }
+
+  .slick-next { right: 23%; }
+  .slick-prev { left: 23%; }
+  .slick-list { margin-top: -40px !important; }
+
+  .copy__cardname {}
+  .copy__headline {}
+  .copy__details { font-size: 22px; line-height: 32px; }
+}
+
+@media only screen and (max-device-width: 1200px), (max-width: 1200px) {
+
+  .cardbene__subhead { font-size: 16px; line-height: 20px; }
+
+  .card.slick-current .card__img { width: 440px; }
+
+  .card__img { width: 340px; margin-top: 60px; }
+
+  .slick-next { right: 22%; top: 20%; }
+  .slick-prev { left: 22%; top: 20%; }
+
+  .copy__details { font-size: 19px; line-height: 30px; }
+}
+
+@media only screen and (max-device-width: 960px), (max-width: 960px) {
+
+  .card__img { width: 300px; margin-top: 60px; }
+  .card .btn--learnmore { margin: 16px 0 40px; }
+
+  .slick-prev, .slick-next { width: 30px; height: 56px; background-size: 100%; }
+
+  .cardbene__subhead { font-size: 13px; line-height: 18px; }
+
+  .cardbene__headline { font-size: 19px; line-height: 28px; }
+
+  .copy__details { font-size: 16px; line-height: 27px; }
+}
+
+@media only screen and (max-device-width: 768px), (max-width: 769px) {
+
+  .nav__logo {
+    padding: 10px;
+  }
+
+  .nav__logoimg {
+    width: 120px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .slick-list {
+    margin-top: 0 !important;
+  }
+
+  .jumbo__header {
+    font-size: 26px;
+    padding: 16px 40px;
+  }
+
+  .bg {
+    height: 150px;
+  }
+
+  .slick-slider {
+    margin-top: -56px;
+  }
+
+  .card__img {
+    width: 190px;
+    margin-top: 28px;
+  }
+
+  .card.slick-current .card__img {
+    width: 108%;
+    max-width: 108%;
+    margin-left: -4%;
+  }
+
+  .card__title {
+    display: none;
+  }
+
+  .card__title--mobile {
+    display: block;
+  }
+
+  .card.slick-current .btn--learnmore,
+  .card .btn--learnmore {
+    display: none;
+  }
+
+  .card.slick-current .btn--learnmore--mobile {
+    display: inline-block;
+  }
+
+  .card__title {
+    font-size: 23px;
+  }
+
+  .card__name {
+    font-size: 16px;
+    display: block;
+    clear: both;
+    margin-bottom: -10px;
+  }
+
+  .cardbene__headline {
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .cardbene__subhead {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .card__bene:after {
+    display: none;
+  }
+
+  .card__bene {
+    width: 100% !important;
+    margin-bottom: 12px;
+  }
+
+  .card__title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card .btn--learnmore {
+    margin: 2px 0 -4px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 9px 44px;
+  }
+
+  .card__benes {
+    height: auto;
+    width: 120%;
+    margin-left: -10%;
+    padding: 10px 0;
+    overflow: hidden;
+  }
+
+  .cardbene__headline {
+    margin-bottom: 0;
+  }
+
+  .card--ring .cardbene__headline {
+    margin-top: 0;
+  }
+
+  .navsec {
+    height: 100px;
+  }
+
+  .navsec__item {
+    width: 30%;
+  }
+
+  .navsec__link {
+    width: 100%;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 17px 25px;
+    text-align: center;
+    height: auto;
+  }
+
+  .navsec__icon {
+    margin-bottom: 0;
+  }
+
+  .section {
+    padding: 30px 0 40px;
+  }
+
+  .copy, .newhero {
+    width: 100%;
+  }
+
+  .copy__headline {
+    font-size: 23px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .copy__details {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  .copy__cardname {
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 19px;
+  }
+
+  .newhero__img {
+    max-width: 250px;
+  }
+
+  .btn--learnmore {
+    font-size: 16px;
+    padding: 14px 56px;
+  }
+
+  .footer {
+    padding: 14px;
+  }
+
+  .footer__item {
+    font-size: 13px;
+  }
+
+  .footer__copyright {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .footer__social {
+    font-size: 30px;
+    float: left;
+  }
+
+  .footer__social a {
+    margin: 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .footer__left {
+    width: 100%;
+  }
+
+  .footer__item:last-child {
+    margin-right: 0;
+  }
+}
