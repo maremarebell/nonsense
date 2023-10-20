@@ -1,0 +1,214 @@
+section { clear: both; overflow: hidden; }
+
+.container-fluid { max-width: 1140px; }
+
+.index { position: relative; z-index: 1; }
+.index h2 { color: #50308d; font-family: "helvetica-neue-63-med-ext"; font-size: 32px; margin: 0; margin-bottom: 10px; text-transform: uppercase; }
+.index p { font-family: "helvetica-neue"; }
+.index p.lead { text-align: center; }
+.index .container-fluid { padding-left: 0; padding-right: 0; }
+
+.container-btn-apply { text-align: center; }
+
+.btn.btn-apply { width: 260px; background-color: #b73392; color: #ffffff; font-family: "helvetica-neue-medium"; display: inline-block; border-radius: 3px; padding: 10px 0 6px 0; }
+.btn.btn-apply strong { font-family: "helvetica-neue-63-med-ext"; font-size: 22px; line-height: 1em; display: block; text-transform: uppercase; letter-spacing: 1px; }
+.btn.btn-apply small { display: block; font-size: 12px; line-height: 1em; margin-bottom: 4px; }
+.btn.btn-apply:hover, .btn.btn-apply:focus { color: #ffffff; background-color: #db1e98; outline: 0; }
+
+#accordion { height: auto; }
+
+.in-hawaii .navbar.navbar-default ul.nav.navbar-nav { padding-left: 0; padding-right: 30px; }
+.in-hawaii .navbar.navbar-default ul.nav.navbar-nav .tcs a { max-width: 100px; padding-top: 34px; padding-bottom: 34px; }
+.in-hawaii .navbar.navbar-default .navbar-brand img { width: 170px; }
+.in-hawaii .navbar.navbar-default .btn-apply { width: 240px; }
+
+.navbar.navbar-default { border-width: 0; background-color: rgba(255, 255, 255, 0.8); font-family: "helvetica-neue-medium"; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); }
+.navbar.navbar-default .navbar-header { height: 108px; }
+.navbar.navbar-default .navbar-brand { padding-top: 28px; width: auto; }
+.navbar.navbar-default .navbar-brand img { width: 200px; display: inline-block; }
+.navbar.navbar-default .navbar-brand img.for-hawaiis { margin-left: 10px; }
+.navbar.navbar-default .navbar-toggle { border-width: 0; background-color: transparent; padding: 11px 10px; margin-right: -15px; }
+.navbar.navbar-default .navbar-toggle .icon-bar { background-color: #50308d; height: 10px; width: 48px; margin-bottom: 8px; }
+.navbar.navbar-default .navbar-toggle .icon-bar:last-child { margin-bottom: 0; }
+.navbar.navbar-default .navbar-toggle:focus, .navbar.navbar-default .navbar-toggle:hover { background-color: transparent; }
+.navbar.navbar-default .navbar-toggle:focus .icon-bar, .navbar.navbar-default .navbar-toggle:hover .icon-bar { background-color: #50308d; }
+.navbar.navbar-default ul.nav.navbar-nav { padding-right: 20px; text-align: right; }
+.navbar.navbar-default ul.nav.navbar-nav > li > a { color: #231f1f; text-transform: uppercase; font-size: 15px; line-height: 19px; padding-top: 45px; padding-bottom: 45px; height: 108px; }
+.navbar.navbar-default ul.nav.navbar-nav > li > a:hover { background-color: transparent; color: #b73392; }
+.navbar.navbar-default .navbar-right .btn-apply { margin-top: 20px; marging-bottom: 20px; }
+
+section.page-hero { background: url("../images/bg-rainbow.jpg") top center no-repeat; height: 444px; padding-top: 190px; color: #ffffff; }
+section.page-hero .hero-card { text-align: center; padding-left: 0; padding-right: 0; }
+section.page-hero .hero-card img { width: 100%; max-width: 322px; display: inline-block; }
+section.page-hero .hero-headline { text-align: center; padding-top: 34px; padding-left: 0; padding-right: 0; }
+section.page-hero .hero-headline img { display: inline-block; max-width: 500px; }
+section.page-hero .hero-headline h1 { font-family: "helvetica-neue-63-med-ext"; font-size: 44px; text-transform: uppercase; }
+section.page-hero .hero-headline p { font-size: 16px; }
+
+section.page-herobenes { background-color: #f4f2e9; padding: 40px 0; }
+section.page-herobenes h2 { font-size: 24px; }
+section.page-herobenes p { font-family: "helvetica-neue-medium"; font-size: 16px; margin: 0; }
+section.page-herobenes .col-small { padding-right: 0; }
+
+section.page-morebenes { background: url("../images/bg-flower-top.jpg") top left no-repeat; padding: 60px 0; }
+section.page-morebenes h2 { text-align: center; margin-bottom: 54px; }
+section.page-morebenes .box { border: 2px solid #b73392; padding: 40px; }
+section.page-morebenes ul { list-style-type: none; margin-left: 0; padding-left: 0; }
+section.page-morebenes ul li { text-align: center; font-size: 22px; line-height: 1.3em; margin-bottom: 30px; }
+section.page-morebenes ul li img { display: block; clear: both; width: 70px; margin: auto; }
+section.page-morebenes ul li strong { font-family: "helvetica-neue"; font-weight: bold; }
+section.page-morebenes ul li p { font-family: "helvetica-neue-medium"; margin: auto; }
+
+section.page-transfers { background: #f4f2e9 url("../images/bg-flower-bottom.jpg") bottom right no-repeat; padding: 60px 0 42px 0; }
+section.page-transfers h2, section.page-transfers p { text-align: center; }
+section.page-transfers h2 { margin-bottom: 40px; }
+section.page-transfers p { width: 76%; margin: 18px auto; font-size: 22px; }
+section.page-transfers span { font-weight: bold; display: block; clear: both; }
+
+section.page-destinations { padding: 60px 0 10px 0; }
+section.page-destinations h2 { text-align: center; margin-bottom: 50px; }
+section.page-destinations p.lead { margin-bottom: 60px; }
+section.page-destinations .destination { margin-bottom: 50px; }
+section.page-destinations .destination img { width: 100%; }
+section.page-destinations .destination > div { background-color: #b73392; color: #ffffff; text-transform: uppercase; text-align: center; font-size: 18px; font-family: "helvetica-neue"; font-weight: bold; padding: 22px 0px; margin-top: 4px; }
+section.page-destinations .col-sm-4 { padding-left: 20px; padding-right: 20px; }
+
+footer.page-footer { background-color: #f4f2e9; padding: 40px 0; font-size: 14px; font-family: "helvetica-neue"; }
+footer.page-footer .logo { max-width: 220px; }
+footer.page-footer strong { font-weight: bold; }
+footer.page-footer a { text-decoration: underline; color: inherit; }
+footer.page-footer ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 12px; display: block; clear: both; overflow: hidden; margin-left: -10px; }
+footer.page-footer ul li { float: left; padding: 10px; }
+footer.page-footer p { margin-bottom: 16px; line-height: 1.4em; }
+
+.faqs { background-color: #ffffff; padding: 20px; }
+.faqs h1 { font-size: 20px; color: #b73392; font-family: "helvetica-neue-63-med-ext"; margin: 0; margin-bottom: 10px; }
+.faqs .ui-state-active, .faqs .ui-widget-content .ui-state-active, .faqs .ui-widget-header .ui-state-active, .faqs .ui-state-default, .faqs .ui-widget-content .ui-state-default, .faqs .ui-widget-header .ui-state-default, .faqs .ui-widget-content { background-color: transparent; border-width: 0; }
+.faqs .ui-state-active:focus, .faqs .ui-widget-content .ui-state-active:focus, .faqs .ui-widget-header .ui-state-active:focus, .faqs .ui-state-default:focus, .faqs .ui-widget-content .ui-state-default:focus, .faqs .ui-widget-header .ui-state-default:focus, .faqs .ui-widget-content:focus { outline: 0; }
+.faqs .ui-state-default .ui-icon { background-image: none; }
+.faqs .ui-state-default .ui-icon:after { content: "+"; color: #231f1f; position: absolute; display: block; font-size: 12px; text-indent: 0; }
+.faqs .ui-state-active .ui-icon:after { content: "-"; }
+
+@media only screen and (min-device-width: 1700px), (min-width: 1700px) {
+  section.page-hero { background-size: 100%; }
+}
+
+@media only screen and (max-device-width: 1700px), (max-width: 1700px) {
+  section.page-hero { background-size: initial; background-position: top middle; }
+}
+
+@media only screen and (max-device-width: 1200px), (max-width: 1200px) {
+  .index .container-fluid { padding-left: 10px; padding-right: 10px; }
+  .btn.btn-apply { width: 200px; padding: 8px 0 4px 0; }
+  .btn.btn-apply strong { font-size: 20px; line-height: 1em; }
+  .btn.btn-apply small { font-size: 11px; line-height: 1em; }
+  .in-hawaii .navbar.navbar-default ul.nav.navbar-nav .tcs a { max-width: 120px; padding-top: 22px; padding-bottom: 22px; }
+  .in-hawaii .navbar.navbar-default .btn-apply { width: 180px; }
+  .in-hawaii .navbar.navbar-default ul.nav.navbar-nav { padding-right: 10px; }
+  .in-hawaii .navbar.navbar-default .navbar-header .navbar-brand img { width: 130px; }
+  .navbar.navbar-default ul.nav.navbar-nav { padding-left: 0; }
+  .navbar.navbar-default .navbar-header { height: 80px; }
+  .navbar.navbar-default .navbar-header .navbar-brand { width: auto; padding-top: 20px; padding-bottom: 20px; }
+  .navbar.navbar-default .navbar-header .navbar-brand img { width: 140px; }
+  .navbar.navbar-default ul.nav.navbar-nav > li > a { height: 80px; }
+  .navbar.navbar-default .navbar-right { margin-right: 0; }
+  .navbar.navbar-default .navbar-right .btn-apply { margin-top: 8px; }
+  .navbar.navbar-default ul.nav.navbar-nav > li > a { padding: 30px 10px; }
+  section.page-hero { padding-top: 110px; height: 350px; }
+  section.page-hero .hero-headline h1 { font-size: 38px; }
+  section.page-destinations .destination > div { font-size: 14px; }
+}
+
+@media only screen and (max-device-width: 991px), (max-width: 991px) {
+  .in-hawaii .navbar.navbar-default ul.nav.navbar-nav .tcs a { max-width: 100%; height: auto; padding-top: 10px; padding-bottom: 10px; }
+  .navbar.navbar-default { background-color: #ffffff; }
+  .navbar.navbar-default .visible-sm { width: auto; float: right; }
+  .navbar.navbar-default .btn.btn-apply { width: auto; padding: 5px 10px 2px 10px; margin: 10px 0; height: 48px; }
+  .navbar.navbar-default .btn.btn-apply strong { font-size: 14px; line-height: 1em; }
+  .navbar.navbar-default .btn.btn-apply small { font-size: 9px; line-height: 0.9em; }
+  .navbar.navbar-default .navbar-header { float: none; height: 70px; width: 100%; }
+  .navbar.navbar-default .navbar-header .navbar-brand { padding-top: 16px; }
+  .navbar.navbar-default .navbar-left, .navbar.navbar-default .navbar-right { float: none !important; }
+  .navbar.navbar-default .navbar-toggle { display: block; margin: 0; margin-right: -15px; margin-left: 15px; }
+  .navbar.navbar-default .navbar-collapse { border-top: 1px solid transparent; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+  .navbar.navbar-default .navbar-fixed-top { top: 0; border-width: 0 0 1px; }
+  .navbar.navbar-default .navbar-collapse.collapse { display: none !important; }
+  .navbar.navbar-default .navbar-nav { float: none !important; margin-top: 7.5px; }
+  .navbar.navbar-default .navbar-nav > li { float: none; border-top: 1px solid #d9d9d9; }
+  .navbar.navbar-default ul.nav.navbar-nav > li > a { padding-top: 10px; padding-bottom: 10px; height: auto; text-align: left; }
+  .navbar.navbar-default .collapse.in { display: block !important; }
+  .navbar.navbar-default .container-fluid > .navbar-collapse { margin-left: -15px; margin-right: -15px; width: 100%; margin: 0; }
+  section.page-hero .hero-headline { padding-top: 14px; }
+  section.page-hero .hero-headline img { width: 310px; }
+  section.page-hero .hero-headline h1 { font-size: 44px; }
+  section.page-morebenes ul li { font-size: 14px; }
+  section.page-destinations .col-sm-4 { padding-left: 10px; padding-right: 10px; }
+  section.page-destinations .destination { margin-bottom: 20px; }
+  section.page-destinations .destination > div { font-size: 12px; }
+}
+
+@media only screen and (max-device-width: 767px), (max-width: 767px) {
+  .in-hawaii .navbar.navbar-default .navbar-header .navbar-brand img { width: 100px; }
+  .index h2 { font-size: 20px; margin-bottom: 20px; }
+  .navbar.navbar-default .container-fluid { padding-right: 0; }
+  .navbar.navbar-default .navbar-header .navbar-brand { padding: 0; height: 100%; vertical-align: middle; padding: 20px 14px; }
+  .navbar.navbar-default .navbar-header .navbar-brand img { width: 100px; display: inline-block; vertical-align: middle; float: none; }
+  .btn.btn-apply.btn-apply-mobile { border-radius: 0; width: 100%; padding: 12px 0 6px 0; }
+  section.page-hero { padding-top: 80px; padding-bottom: 10px; height: auto; background-position: -940px 0; background-size: 1860px 430px; }
+  section.page-hero .hero-headline { padding-top: 14px; }
+  section.page-hero .hero-headline img { width: 270px; }
+  section.page-hero .hero-headline h1 { font-size: 26px; }
+  section.page-hero .hero-headline p { font-size: 14px; }
+  section.page-herobenes { text-align: center; padding: 30px 0; }
+  section.page-herobenes h2 { margin-bottom: 0; font-size: 16px; }
+  section.page-herobenes p { font-size: 14px; }
+  section.page-herobenes .bene { margin-bottom: 20px; }
+  section.page-herobenes .bene:last-child { margin-bottom: 0; }
+  section.page-morebenes { padding: 30px 0; background-image: none; }
+  section.page-morebenes h2 { margin-bottom: 20px; }
+  section.page-morebenes .box { border-width: 0; padding: 0 20px; }
+  section.page-morebenes .box img { width: 50px; }
+  section.page-morebenes .box br { display: none; }
+  section.page-transfers { padding: 30px 0 10px 0; text-align: center; background-image: none; }
+  section.page-transfers h2 { margin-bottom: 20px; }
+  section.page-transfers p.lead { font-size: 14px; width: 100%; }
+  section.page-destinations { padding: 30px 0; }
+  section.page-destinations h2, section.page-destinations p.lead { margin-bottom: 20px; }
+  section.page-destinations .col-sm-4 { padding-left: 15px; padding-right: 15px; }
+  section.page-destinations .destination { margin-bottom: 30px; }
+  footer.page-footer { padding: 30px 0; font-size: 12px; }
+}
+
+@media only screen and (max-device-width: 480px), (max-width: 480px) {
+  .in-hawaii .hide-on-hawaii-xs.visible-xs { display: none !important; }
+  .in-hawaii .navbar.navbar-default .navbar-header .navbar-brand img { width: 100px; }
+  .navbar.navbar-default .navbar-header { float: none; }
+
+  .navbar.navbar-default .btn.btn-apply { width: auto; padding: 7px 4px 2px 4px; margin: 10px 0; height: auto; }
+  .navbar.navbar-default .btn.btn-apply strong { font-size: 12px; line-height: 1em; }
+  .navbar.navbar-default .btn.btn-apply small { font-size: 8px; line-height: 0.9em; }
+
+  .navbar.navbar-default .navbar-toggle { margin-right: -20px; margin-left: 4px; margin-top: 6px; }
+  .navbar.navbar-default .navbar-toggle .icon-bar { height: 7px; margin-bottom: 6px; width: 34px; }
+
+  section.page-hero { padding-top: 80px; padding-bottom: 10px; height: auto; background-position: -1150px 0; background-size: 1800px 420px; }
+  section.page-hero .hero-card img { width: 80%; }
+  section.page-hero .hero-headline img { width: 230px; }
+  section.page-hero .hero-headline h1 { font-size: 16px; margin-top: 14px; }
+  section.page-hero .hero-headline p { font-size: 11px; }
+  section.page-morebenes { padding-bottom: 20px; }
+  section.page-morebenes h2 { font-size: 16px; }
+  section.page-morebenes ul li { margin-bottom: 10px; }
+  section.page-destinations p.lead { font-size: 14px; }
+  section.page-destinations .destination { width: 100%; margin-bottom: 10px; }
+  footer.page-footer img.logo.pull-right { display: block; margin: auto; float: none !important; margin-top: 10px; width: 140px; }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+  .navbar-fixed-top .navbar-collapse { max-height: 216px!important; }
+}
+
+@font-face { font-family: "helvetica-neue-63-med-ext"; src: url("../fonts/299F4E_0_0.eot"); src: url("../fonts/299F4E_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/299F4E_0_0.woff") format("woff"), url("../fonts/299F4E_0_0.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "helvetica-neue-medium"; src: url("../fonts/helvetica_neue_med.eot"); src: url("../fonts/helvetica_neue_med.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_med.woff") format("woff"), url("../fonts/helvetica_neue_med.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "helvetica-neue"; src: url("../fonts/helvetica_neue_roman.eot"); src: url("../fonts/helvetica_neue_roman.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_roman.woff") format("woff"), url("../fonts/helvetica_neue_roman.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "helvetica-neue"; src: url("../fonts/helvetica_neue_bold.eot"); src: url("../fonts/helvetica_neue_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_bold.woff") format("woff"), url("../fonts/helvetica_neue_bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }

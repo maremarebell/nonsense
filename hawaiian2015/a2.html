@@ -1,0 +1,190 @@
+<style>
+@font-face {
+    font-family: museo-slab;
+   /* src: url(//cimage.adobe.com/safeco/9921/fonts/c1-v03-Rockwell.muse);*/
+	    src: url('//cimage.adobe.com/safeco/9921/fonts/Museo_Slab_500_2-webfont.eot');
+    src: url('//cimage.adobe.com/safeco/9921/fonts/Museo_Slab_500_2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//cimage.adobe.com/safeco/9921/fonts/Museo_Slab_500_2-webfont.woff2') format('woff2'),
+         url('//cimage.adobe.com/safeco/9921/fonts/Museo_Slab_500_2-webfont.woff') format('woff'),
+         url('//cimage.adobe.com/safeco/9921/fonts/Museo_Slab_500_2-webfont.ttf') format('truetype'),
+         url('//cimage.adobe.com/safeco/9921/fonts/Museo_Slab_500_2-webfont.svg#museo_slab500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.tnt_paperless{
+    float: left;
+    margin-left: -11px;
+    margin-top: 12px;
+}
+.tnt_mask{
+	position:fixed;
+	z-index:999;
+	width:100%;
+	height:100%;
+	opacity:0.8;
+	background-color:#000;}
+.tnt_content{
+	/*width: 57%;*/
+	width: 907px;
+ /*   margin-left: 20%;*/
+    position: absolute;
+    height: 70%;
+    z-index: 9991;
+	margin-top: 26px;}
+.tnt_close{
+	cursor: pointer;
+    background: #A4CD39;
+    border: #787878;
+    width: 140px;
+    min-height: 40px;
+    font-family: museo-slab, serif;
+    font-weight: 700;
+    float: right;
+    margin-right:20px;
+    color: #FFFFFF;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 2px;
+	}
+.tnt_close:hover{
+	background:#787878;}
+.tnt_100{
+	width:100%;
+	float:left;}
+.tnt_p100{
+	min-height: 48px;
+    background-color: transparent;
+    color: #62BEF0;
+    line-height: 41px;
+    text-align: center;
+    font-size: 34px;
+    font-family: museo-slab, serif;
+    font-weight: 700;}
+.tnt_2{
+position: relative;
+    top: 152px;
+    left: -143px;
+    float: left;}
+.tnt_1{
+	    margin-left: 103px;
+		float:left;}
+div.tnt_para1{
+	float: left;
+    width: 37%;
+    position: relative;
+    margin-top: 0px;
+    top: -497px;
+    /* background: white; */
+    font-size: 14px;
+    font-weight: 700;}
+p.tnt_para2{
+	color: #62BEF0;
+    line-height: 36px;
+    text-align: left;
+    font-size: 30px;
+    font-family: museo-slab, serif;
+    font-weight: 700;
+    width: 70%;
+    margin-left: 11%;}
+#u95-4{
+	list-style-type:none;}
+#u95-4 li{ 
+	padding-left: 4em;
+    text-indent: -0.7em;
+    line-height: 23px;
+    font-size: 18px;
+    font-family: museo-slab, serif;
+    font-weight: 700;
+    color: white;
+    width: 92%;
+    margin-bottom: 10px;
+    word-spacing: 1px;
+	}
+#u95-4 li:before{
+	 content: "• ";
+    color: #62BEF0;
+	}
+.spanheader,#u90-5{
+	color:#62BEF0;}
+</style>
+
+<div style="display:none"> 
+     <div class="tnt_mask">
+        </div>
+	<div class="tnt_page">
+        <div class="tnt_content">
+     	<div class="tnt_100">	<span class="tnt_close">Close</span></div>
+       <div class="tnt_100">	<p class="tnt_p100">Your Safeco.com Account Is About to Get Better</p></div>
+      <div class="tnt_100">
+       <div class="tnt_img1">
+       <img src="//cimage.adobe.com/safeco1/9921/desktop sg.jpg" alt="" class="tnt_1" />
+          <img src="//cimage.adobe.com/safeco1/9921/c1-mobile-home-2.png" alt="" class="tnt_2" />
+          <div class="tnt_para1">
+           <p class="tnt_para2">In just a few weeks, you can look forward to:</p>
+        
+           <ul class="list0 nls-None" id="u95-4">
+     		<li id="u95-3"><span class="spanheader">Taking care of business quickly</span><br><span id="u95-2">See policy and account details right on the homepage, and use the improved navigation to get around in fewer clicks.</span></li>
+   		 	<li id="u95-8"><span class="spanheader">Going mobile: </span><span id="u95-7">Log in on your smartphone to view your ID cards or other policy details.</span></li>
+            <li id="u95-13"><span class="spanheader">Staying informed: </span><span id="u95-12">Find out when policy changes will take effect.</span>
+           		<p id="u90-2">Plus, 2016 will bring additional enhancements, making it easier to pay your bill, schedule payments and more.</p>
+            	<p id="u90-5">These are the changes you’ve been asking for, and we're excited to deliver them!</p>
+            </li>
+           </ul>
+           
+         
+          </div>
+       </div>
+       </div>
+        </div>
+	</div>
+</div>
+<!--
+Campaign Name: ${campaign.name encode="escape"}
+Experience Name: ${campaign.recipe.name encode="escape"}
+-->
+<script>
+var injMbox = {		
+	timeout:8000,
+	interval : 500,	
+	init: function(){
+		var that=this;
+		if ( typeof jQuery !== "undefined" ){
+			//on mbox load
+				mboxFactoryDefault.addOnLoad(function(){
+					//offer code					
+					// click track call
+jQuery("#ctl00_contentMain_NeedHelp_panNeedHelp").after('<img src="//cimage.adobe.com/safeco/9921/paperless.png" class="tnt_paperless">');
+					injMbox.mbox_track();
+					jQuery("body").prepend($(".tnt_mask"));
+					jQuery("#container").prepend($(".tnt_page"));
+					})
+					jQuery(".tnt_close").on("click",function(){
+						mboxUpdate("mboxClickTrack","clicked=close");
+						jQuery(".tnt_mask,.tnt_page").remove();						
+						})
+					
+			
+		} else { 
+			if (that.timeout> that.interval) {
+                setTimeout(that.init, that.interval);
+				 that.timeout -= that.interval;
+				 
+            }
+			          
+		}
+	},
+mbox_track:function(){
+	var mbox = mboxFactoryDefault.getMboxes().get("mboxClickTrack");
+					if (mbox.length()==0) { 
+						var d = document.createElement("div");
+						d.id = "mboxClickTrack_div";
+						document.body.appendChild(d);
+						mboxDefine("mboxClickTrack_div","mboxClickTrack");
+					}
+}
+  
+}
+injMbox.init();
+</script>
