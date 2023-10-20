@@ -1,0 +1,72 @@
+
+body, select, input, button, textarea, button {
+    font: 13px/1.231 tahoma, helvetica, arial, clean, sans-serif;
+    color: #000;
+    height: 100%;
+    text-align: left;
+}
+
+#bd h1.pageTitle {
+    color: #333333;
+    font-size: 138.5%;
+    font-weight: normal;
+}
+
+.error {
+    color: #ff3300;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+a {
+    color: #54558E;
+    text-decoration: none;
+}
+
+#ft {
+    display: block;
+    float: right;
+}
+
+a.appButton, span.appButton, a.appButtonPrint, span, appButtonPrint {
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.appButton {
+    float: right;
+    background: none repeat scroll 0 0 #909693;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    width: 145px;
+}
+
+.appButtonPrint {
+    background: none repeat scroll 0 0 #909693;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    width: 145px;
+}

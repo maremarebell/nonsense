@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Header for JetBlue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #e1e1e1;
+        }
+
+        @font-face {
+            font-family: 'JBFuturaStd';
+            src: url('font/JBFuturaStd-Book.eot'); /* IE9 AND ABOVE */
+            src: url('font/JBFuturaStd-Book.eot?#iefix') format('embedded-opentype'), url('font/JBFuturaStd-Book.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #customheader {
+            margin: auto;
+            width: 1406px;
+            font-family: 'JBFuturaStd', sans-serif;
+            box-sizing: border-box;
+        }
+
+        #customheader .wrapper {
+            width: 100%;
+        }
+
+        #customheader .container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        #customheader *,
+        #customheader *:before,
+        #customheader *:after {
+          box-sizing: inherit;
+        }
+
+        /* RESETS */
+        #customheader ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #customheader ul li,
+        #customheader p,
+        #customheader p.lead,
+        #customheader h1,
+        #customheader h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* MENU */
+        #customheader .menu,
+        #customheader .menu .container {
+            background-color: #ffffff;
+            height: 96px;
+        }
+
+        #customheader .menu .container > img {
+            width: 217px;
+            height: 63px;
+            display: block;
+            float: left;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        #customheader .menu .to-the-right {
+            float: right;
+            vertical-align: middle;
+            padding-top: 22px;
+        }
+
+        #customheader .menu ul {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #customheader .menu ul li {
+            display: inline-block;
+            padding: 0 34px;
+        }
+
+        #customheader .menu ul li:first-child {
+            border-right: 1px solid #3c4459;
+        }
+
+        #customheader .menu ul li a {
+           display: block;
+           width: 100%;
+           height: 100%;
+           color: #0b203d;
+           font-size: 20px;
+           line-height: 22px;
+           text-decoration: none;
+        }
+
+        #customheader .btn-apply {
+            display: inline-block;
+            text-align: center;
+        }
+
+        #customheader .btn-apply-small {
+            background-color: #76c072;
+            border: 3px solid #5bb75b;
+            font-size: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            padding: 4px 12px;
+            vertical-align: middle;
+        }
+
+        #customheader .btn-apply-small small {
+            font-size: 13px;
+            display: block;
+        }
+
+        #customheader .btn-apply-small img {
+            width: 9px;
+            height: 11px;
+            display: inline-block;
+        }
+
+        /* HERO */
+        #customheader .hero {
+            background: #0b203d url('images/bg-header.jpg') top right no-repeat;
+            height: 386px;
+        }
+
+        #customheader .hero .area-card {
+            float: left;
+            width: 356px;
+        }
+
+        #customheader .hero .area-card img {
+            width: 364px;
+            height: 253px;
+            display: block;
+            margin-left: -48px;
+            margin-top: 44px;
+        }
+
+        #customheader .hero .area-card p {
+            color: #96cfe3;
+            font-size: 32px;
+            text-align: left;
+            margin-left: 30px;
+            margin-top: 18px;
+        }
+
+        #customheader .hero .area-card p sup {
+            font-size: 12px;
+            vertical-align: text-top;
+            line-height: 20px;
+        }
+
+        #customheader .hero .area-main {
+            float: left;
+        }
+
+        #customheader .hero .area-main h1 {
+            color: #ffffff;
+            font-size: 60px;
+            line-height: 66px;
+            text-transform: uppercase;
+            margin-top: 40px;
+        }
+
+        #customheader .hero .area-main p.lead {
+            color: #ffffff;
+            font-size: 30px;
+            line-height: 32px;
+            margin-top: 12px;
+        }
+
+        #customheader .hero .area-main p.lead strong {
+            text-transform: uppercase;
+            color: #96cfe3;
+        }
+
+        #customheader .hero .area-main p.lead sup {
+            font-size: 18px;
+            vertical-align: text-top;
+            line-height: 24px;
+        }
+
+        #customheader .hero .area-main small {
+            display: block;
+            clear: both;
+            font-size: 19px;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        #customheader .hero .area-main small a {
+            color: #60bb46;
+        }
+
+        #customheader .btn-apply-big {
+            background-color: #4c995c;
+            border: 5px solid #5bb75b;
+            color: #ffffff;
+            font-size: 32px;
+            line-height: 32px;
+            padding: 14px 46px;
+            text-decoration: none;
+            clear: both;
+            margin-top: 26px;
+        }
+
+        #customheader .strip {
+            background-color: #ffffff;
+            height: 244px;
+            padding-top: 56px;
+        }
+
+        #customheader .strip .col {
+            float: left;
+            text-align: center;
+        }
+
+        #customheader .strip .col-1 { width: 28%; }
+        #customheader .strip .col-2 { width: 14%; }
+        #customheader .strip .col-3 { width: 17%; }
+        #customheader .strip .col-4 { width: 17%; padding-right: 20px; }
+        #customheader .strip .col-5 { width: 23%; }
+
+        #customheader .strip .col-5 {
+            border-left: 1px solid #08213b;
+            padding-left: 20px;
+        }
+
+        #customheader .strip .col h2 {
+            font-size: 62px;
+            line-height: 64px;
+            color: #5086b8;
+
+        }
+
+        #customheader .strip .col h2,
+        #customheader .strip .col ul {
+            margin-top: 4px;
+        }
+
+        #customheader .strip .col p {
+            font-size: 17px;
+            line-height: 20px;
+            color: #4f5764;
+            margin-top: 12px;
+        }
+
+        #customheader .strip .col p sup {
+            font-size: 12px;
+            vertical-align: text-top;
+            line-height: 16px;
+        }
+
+        #customheader .strip .col ul {
+            text-align: left;
+            list-style-type: none;
+        }
+
+        #customheader .strip .col ul li {
+            color: #505764;
+            font-size: 24px;
+            line-height: 26px;
+            margin-bottom: 14px;
+        }
+
+        #customheader .strip .col ul li strong {
+            color: #5087b8;
+        }
+
+        #customheader .strip .col ul li small {
+            font-size: 16px;
+            line-height: 16px;
+            display: block;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            #customheader,
+            #customheader .container  {
+                width: 100%;
+                min-width: 1024px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="customheader">
+        <div class="menu">
+            <div class="container">
+                <img src="images/logo.png" alt="logo" />
+                <div class="to-the-right">
+                    <ul>
+                        <li>
+                            <a href="#todo">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="#todo">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+
+                    <a href="#todo" class="btn-apply-small btn-apply">
+                        <span>APPLY NOW</span>
+                        <small>
+                            Get a response in seconds
+                            <img src="images/icon-lock.png" alt="lock icon" />
+                        </small>
+                    </a>
+                </div> <!-- /.to-the-right -->
+            </div>
+        </div> <!-- /.menu -->
+
+        <div class="hero">
+            <div class="container">
+                <div class="area-card">
+                    <img src="images/card.png" alt="Image of card" />
+                    <p>NO ANNUAL FEE<sup>1</sup></p>
+                </div>
+
+                <div class="area-main">
+                    <h1>
+                        Fly Faster<br/>
+                        Than You Think
+                    </h1>
+
+                    <p class="lead">
+                        with the <strong>NEW</strong> JetBlue Card<sup>1</sup> in
+                        your pocket
+                    </p>
+
+                    <a href="#todo" class="btn-apply btn-apply-big">
+                        APPLY NOW
+                    </a>
+
+                    <small>
+                        Looking for a card with even more benefits? Check out
+                        the <a href="#todo">JetBlue Plus Card!</a>
+                    </small>
+                </div> <!-- /.area-main -->
+            </div>
+        </div> <!-- /.hero -->
+
+        <div class="strip">
+            <div class="container">
+                <div class="col col-1">
+                    <h2>5,000</h2>
+                    <p>
+                        bonus points after you spend $1,000<br/>
+                        on purchases in the first 90 days<sup>2</sup>
+                    </p>
+                </div>
+
+                <div class="col col-2">
+                    <h2>3x</h2>
+                    <p>
+                        points on JetBlue<br/>
+                        purchases<sup>2</sup>
+                    </p>
+                </div>
+
+                <div class="col col-3">
+                    <h2>2x</h2>
+                    <p>
+                        points on restaurants<br/>
+                        and grocery stores<sup>2</sup>
+                    </p>
+                </div>
+
+                <div class="col col-4">
+                    <h2>1x</h2>
+                    <p>
+                        points on all other purchases<sup>2</sup>
+                    </p>
+                </div>
+
+                <div class="col col-5">
+                    <ul>
+                        <li>
+                            <strong>No</strong> blackout dates
+                            <small>on JetBlue-operated flights</small>
+                        </li>
+                        <li>
+                            <strong>Points</strong> don't expire
+                        </li>
+                        <li>
+                            <strong>Unlimited</strong> earning
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- /.strip -->
+    </div> <!-- /.customheader -->
+</body>
+</html>

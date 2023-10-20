@@ -1,0 +1,207 @@
+html.no-scroll{
+    overflow-y: hidden;
+}
+/* --------  MODAL STARTS  ------- */
+#modal-body {
+    max-height: 375px;
+    overflow-y: auto;
+    padding-left:25px;
+    padding-right: 25px;
+    width:100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+.close {
+    font-size: 40px !important;
+    color: #7c7c7c !important;
+    opacity: .9 !important;
+    filter: alpha(opacity=90);
+    position: relative;
+    top: -12px;
+    z-index: 99999;
+    opacity: .9 !important;
+    cursor: pointer;
+}
+#close{
+    text-indent: 67px;
+    display:none;
+}
+#cmaLink{
+    cursor: pointer;
+    color: blue;
+}
+#emailMe{
+    margin: 25px;
+    display: none;
+}
+#emailMe p {
+    padding-top: 10px;
+    color: #666;
+}
+#emailMe label {
+    font-family: 'source_sans_proregular', Arial;
+    color: #666;
+}
+#modal-title, #modal-dialog {
+    display: none;
+}
+.modal-backdrop {
+    position: fixed;
+    top: -50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    filter: alpha(opacity=0);
+    display: none;
+    z-index: 99998;
+    height: 200% !important;
+}
+.modal-dialog {
+    position: fixed;
+    top: 0px;
+    z-index: 99999;
+    width: 590px !important;
+    margin: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+.modal-image {
+    display:block;
+    text-align:center;
+    height: 115px;
+}
+.modal-image .awrStopWatch {
+    text-align:center;
+    background: url('/apply/img/base/awrstopwatch.png') no-repeat 66% 60%;
+    height: 115px;
+    width: 100px;
+    margin: auto;
+}
+.modal-header {
+    min-height: 16.43px;
+    padding: 0px 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.ada_popup_notify{
+    display: none;
+}
+#button_print_tandc, #button_print_paperless{
+    color:#ffffff;
+    width:100px;
+}
+#button_print_tandc img, #button_print_paperless img{
+    position:relative;
+    top:0px;
+    left:0px;
+}
+.borderRemove{
+    border: none !important;
+    box-shadow: none !important;
+}
+.extramargin{
+    padding-top: 21px;
+}
+.modal-header .topMargin {
+    margin-top: 0 !important;
+}
+.close {
+    font-size: 40px !important;
+    opacity: .9 !important;
+    filter: alpha(opacity=90);
+}
+.modal-header .close {
+    margin-top: -50px;
+}
+.modal-title-container {
+    width: 80%;
+}
+.modal-close-container {
+    /*width: 25%;*/
+}
+.panel-heading {
+    color: #666666 !important;
+    background-color: #fff !important;
+    border: none !important;
+    text-align: left;
+    font-size: 16px !important;
+    font-family: 'source_sans_proregular', Arial !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.panel-body .panel-title{
+    color: #767676;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+p.modal {
+    margin-bottom: 0px;
+}
+p.timeoutTitle, p.modal-heading{
+    font-size:22px;
+    font-weight:bold;
+    line-height:30px;
+    margin-top: 0;
+}
+/* --------  MODAL ENDS  ------- */
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .modal-dialog {
+        width: 90% !important;
+    }
+}
+@media (max-width: 480px) {
+    .modal-dialog {
+        width: 90% !important;
+    }
+
+    p.modal-heading {
+        margin-top: 20px !important;
+    }
+
+    .vcnTimeout #modal-body {
+        overflow-y: hidden;
+        margin-top: 0;
+    }
+
+    .vcnTimeout .modal-heading {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        margin-top: 0px !important;
+    }
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1)  {
+    .modal-dialog{
+        width: 70% !important;
+    }
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  {
+    .modal-dialog{
+        width: 55% !important;
+    }
+}

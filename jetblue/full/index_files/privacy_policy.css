@@ -1,0 +1,159 @@
+
+body, select, input, button, textarea, button {
+    font: 13px/1.231 tahoma,helvetica,arial,clean,sans-serif;
+    color: #555555;
+    height: 100%;
+    text-align: left;
+}
+
+.yui-b.notLogged .yui-ge div.first .yui-g, .yui-b.notLogged .yui-gc.subPage div.global {
+    width: 100%;
+}
+
+#apply-doc {
+    margin: auto;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+#bd div#pageTitleContainer {
+    clear: right;
+    min-height: 1.7em;
+}
+
+#bd .secPrivPg .pageTitle {
+    margin-bottom: 0.5em;
+}
+
+#bd .global .pageTitle {
+    float: none;
+    margin: 0 0 1em;
+}
+
+.clear {
+    clear: both;
+}
+
+#bd .global .subTitle {
+    float: left;
+}
+
+span.subTitle, p.subTitle {
+    font-size: 93%;
+}
+
+.subPage span, p.subTitle {
+    color: #999999;
+}
+
+div.line {
+    border-top: 1px solid #D4D4E4;
+    height: 1px;
+    margin-top: 10px;
+    padding: 0.5em 0;
+}
+
+#bd .global div.privacyPDF {
+    float: right;
+    font-size: 85%;
+}
+
+#bd .secPrivPg div.line {
+    border-top: 1px solid #D4D4E4;
+    margin-top: 0;
+    padding: 0.4em 0 0.5em;
+}
+
+#bd .global p {
+    color: #555555;
+    font-size: 93%;
+    line-height: 150%;
+    margin: 0 0 1em 1em;
+}
+
+.bulletList {
+    margin: 0 0 1em 40px;
+}
+
+#bd .global p {
+    color: #555555;
+    font-size: 93%;
+    line-height: 150%;
+    margin: 0 0 1em 1em;
+}
+
+#ft {
+    bottom: 0;
+    height: 124px;
+    overflow: hidden;
+    vertical-align: top;
+    width: 100%;
+}
+
+textarea:focus, input:focus, select:focus, .yui-skin-sam .yuimenuitemlabel, #leftSection a, .container-close, #overlayContainer.photoId, #redeemRwdsDontShowCkBox-button, a {
+    outline: 0 none;
+}
+
+em, .italic {
+    font-style: italic;
+}
+
+a {
+    color: #54558E;
+    text-decoration: none;
+}
+
+#bd .secPrivPg .pageTitle {
+    margin-bottom: 0.5em;
+}
+
+#bd .global .pageTitle {
+    float: none;
+    margin: 0 0 1em;
+}
+
+#bd h1.pageTitle {
+    float: left;
+}
+
+#bd h1, .adModalContent h1 {
+    color: #333333;
+    font-size: 138.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+
+#button_pp_close {
+    float: right;
+}
+
+a.appButton, span.appButton {
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.appButton {
+    float: right;
+    background: none repeat scroll 0 0 #909693;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    width: 145px;
+}
