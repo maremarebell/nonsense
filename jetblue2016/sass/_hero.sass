@@ -1,0 +1,101 @@
+////////////
+// HERO   //
+////////////
+section.section-hero
+  background: $blue-dark url('../images/bg-bluegradient.jpg') repeat-x center bottom
+  height: 420px
+  padding: 56px 10px 0 10px
+  border-bottom: 1px solid $white
+  position: relative
+  @include clearfix
+
+  h1
+    @include clearspacing
+    font: 60px/1.1em $futura-book
+    color: $white
+    text-align: center
+    text-transform: uppercase
+
+  p.lead
+    color: $blue-lighter
+    text-transform: uppercase
+    font: 35px/1.1em $futura-book
+    text-align: center
+
+  .col
+    height: 200px
+
+  .img-plus,
+  .buttons-plus
+    float: left
+
+  .img-reg,
+  .buttons-reg
+    float: right
+
+  .button-group.buttons-reg
+    padding-right: 30px
+    padding-left: 0
+
+  .button-group.buttons-plus
+    padding-left: 30px
+    padding-right: 0
+
+  .col-plus
+    padding-right: 36px
+
+  .col-reg
+    padding-left: 36px
+
+  .button-group
+    width: 50%
+    max-width: 300px
+    padding: 0 12px
+    padding-top: 50px
+
+    small
+      color: $white
+      font: 14px/1.2em $futura-book
+
+    p
+      font: 20px/1.2em $futura-book
+      text-transform: uppercase
+
+      sup
+        font-size: 50%
+        top: -.9em
+
+    .btn.btn-apply
+      width: 100%
+      margin-bottom: 16px
+
+  .buttons-plus p,
+  .card-name-plus
+    color: $blue-lighter
+
+  .buttons-reg p,
+  .card-name-reg
+    color: $green-lighter
+
+  .card-name
+    display: block
+    font: 18px/1.2em $futura-book
+    margin-bottom: 6px
+    text-align: center
+
+  .img-wrapper
+    // min-width: 200px
+    min-height: 200px
+    width: 50%
+    max-width: 290px
+    display: block
+    overflow: hidden
+
+    img
+      width: 100%
+
+  .img-wrapper-reg
+    float: right
+
+  .img-wrapper-plus
+    float: left

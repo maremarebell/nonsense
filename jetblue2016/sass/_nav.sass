@@ -1,0 +1,158 @@
+//////////
+// NAV  //
+//////////
+.navbar.navbar-default
+  background-color: transparent
+  border-width: 0
+  left: 0
+  top: 0
+  border-radius: 0
+  width: 100%
+  z-index: 4
+  z-index: 999
+
+  .navbar-header
+    height: 50px
+
+  ul.nav.navbar-nav
+    text-align: right
+    position: relative
+
+    > li > a
+      font: 400 16px/19px $futura-book
+      color: $white
+      height: 50px
+      padding: 14px
+
+      &:hover
+        color: $blue-lighter
+
+      &:active,
+      &:focus
+        border-width: 0
+        outline: 0
+
+  .pipe
+    display: inline-block
+    position: relative
+    height: 22px
+    width: 1px
+    background-color: $white
+    margin-top: 12px
+
+.navbar.navbar-default.not-scrolled
+  background-color: transparent
+
+  a
+    color: $white
+
+.navbar.navbar-default.scrolled
+  background-color: rgba(255,255,255,.8)
+
+  ul.nav.navbar-nav > li > a
+    color: $blue-medium
+
+  .pipe
+    background-color: $blue-medium
+
+
+////////////////////
+// MOST MOBILE    //
+////////////////////
+@media only screen and (max-device-width: 767px), (max-width: 767px)
+  // undoes a bootstrap default
+  .navbar
+    margin-bottom: 0!important
+
+  .navbar.navbar-default
+    background-color: transparent
+    z-index: 999
+
+    .container-fluid
+      padding: 0
+      margin: 0
+
+    .li-pipe
+      display: none
+
+    .navbar-header
+      float: none
+      height: 44px
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+
+    .navbar-toggle
+      margin: 0
+      display: block
+      border-width: 0
+      width: auto
+      padding: 10px
+      background-color: transparent
+      margin-top: 8px
+
+      .icon-bar
+        height: 3px
+        margin-bottom: 5px
+        background-color: $white
+        width: 30px
+
+        &:last-child
+          margin-bottom: 0
+
+      &:focus,
+      &:hover
+        background-color: transparent
+
+      &:focus .icon-bar,
+      &:hover .icon-bar
+        background-color: $white
+
+    .navbar-collapse
+      border-top: 1px solid transparent
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+      max-height: 216px !important
+      background-color: $white
+      margin: 0
+
+    .navbar-nav
+      float: none !important
+      margin: 0
+
+      > li
+        float: none
+        border-top: 1px solid #d9d9d9
+
+        &:first-child
+          border-top-width: 0
+
+    ul.nav.navbar-nav > li > a
+      padding-top: 10px
+      padding-bottom: 10px
+      height: auto
+      text-align: left
+      color: $black
+
+    .container-fluid > .navbar-collapse
+      margin-left: -15px
+      margin-right: -15px
+      width: 100%
+      margin: 0
+
+  .navbar.navbar-default.scrolled
+    background-color: $blue-dark
+    height: 44px
+    min-height: 44px
+
+    .menu-buttons
+      display: block!important
+
+    .navbar-header
+      display: none
+
+  .navbar.navbar-default.not-scrolled
+    .menu-buttons
+      display: none
+
+    .navbar-header
+      display: block

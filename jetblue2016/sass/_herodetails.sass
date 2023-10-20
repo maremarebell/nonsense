@@ -1,0 +1,55 @@
+////////////////////
+// HERO DETAILS   //
+////////////////////
+section.section-herodetails
+  .col
+    @include clearspacing
+
+  h2
+    @include clearspacing
+    width: 100%
+    color: $white
+    display: block
+    font: 26px/1.2em $futura-semibold
+    padding: 18px 4px
+    text-align: center
+
+    small
+      font: 16px/1.2em $futura-book
+      display: block
+      color: $white
+
+  ul
+    @include clearspacing
+    list-style-type: none
+    text-align: center
+
+  li
+    padding: 20px
+
+  li:nth-child(even)
+    background-color: $blue-lightest
+
+  li strong
+    display: block
+    font: 30px/1em $futura-semibold
+
+  li p
+    font: 21px/1em $futura-book
+
+    sup
+      top: -.6em
+      font-size: 50%
+
+  //////// COLORS ////////
+  .col-plus h2
+    background-color: $blue-dark
+
+  .col-plus li
+    color: $blue-dark
+
+  .col-reg h2
+    background-color: $green-dark
+
+  .col-reg li
+    color: $green-dark

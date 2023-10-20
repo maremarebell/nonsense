@@ -1,0 +1,310 @@
+$white: #ffffff
+$black: #000000
+
+$blue-dark: #0e224e
+$blue-medium: #3464c4
+$blue-cauliflower: #4c8cc3
+$blue-brighter: #3d74e7
+$blue-light: #00c0ff
+$blue-lighter: #a4c6e5
+$blue-lightest: #fafbfd
+
+$green-dark: #006945
+$green-medium: #58a342
+$green-brighter: #68b950
+$green-light: #6ae45e
+$green-lighter: #d1ffc4
+
+$gray-medium: #696969
+$gray-light: #e5e5e5
+
+html
+  box-sizing: border-box
+
+*, *:before,
+*:after
+  box-sizing: inherit
+
+@mixin clearfix
+  &:after,
+  &:before
+    content: ""
+    display: table
+    clear: both
+
+@mixin clearspacing
+  padding: 0
+  margin: 0
+
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+.clear
+  @include clearfix
+
+$helvetica-roman:'helvetica-neue-roman', 'helvetica neue', Helvetica, sans-serif
+$helvetica-bold: 'helvetica-neue-bold', 'helvetica neue', Helvetica, sans-serif
+$futura-book: 'futura-book', 'Futura Book', Futura, helvetica, sans-serif
+$futura-semibold: 'futura-semibold', 'Futura Semibold', Futura, helvetica, sans-serif
+// Site also used Verdana, once in the footer
+
+@font-face
+  font-family: "helvetica-neue-roman"
+  src: url("../fonts/helvetica_neue_roman.eot")
+  src: url("../fonts/helvetica_neue_roman.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_roman.woff") format("woff"), url("../fonts/helvetica_neue_roman.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "helvetica-neue-bold"
+  src: url("../fonts/helvetica_neue_bold.eot")
+  src: url("../fonts/helvetica_neue_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetica_neue_bold.woff") format("woff"), url("../fonts/helvetica_neue_bold.ttf") format("truetype")
+  font-weight: bold
+  font-style: normal
+
+@font-face
+  font-family: "futura-book"
+  src: url("../fonts/JBFuturaStd-Book.otf")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "futura-semibold"
+  src: url("../fonts/JBFuturaStd-SemiBold.otf")
+  font-weight: 600
+  font-style: normal
+
+section
+  clear: both
+  overflow: hidden
+
+.container-fluid
+  padding-left: 0
+  padding-right: 0
+  max-width: 1266px
+
+body
+  position: relative
+  z-index: 1
+
+.button-group
+  text-align: center
+  position: relative
+  margin-top: 6px
+
+  .btn.btn-apply
+    color: #ffffff
+    text-transform: uppercase
+    font: 700 22px/1em $helvetica-bold
+    display: inline-block
+    border-radius: 5px
+    padding: 18px 0
+    text-align: center
+    position: relative
+    z-index: 1
+    width: 254px
+    height: 60px
+    @include transition(all 0.5s ease)
+
+    &:hover, &:focus
+      color: #ffffff
+      outline: 0
+
+    &.btn-plus
+      background-color: $blue-medium
+      border-bottom: 3px solid $green-brighter
+
+      &:hover, &:focus
+        background-color: $blue-brighter
+
+    &.btn-reg
+      background-color: $green-medium
+      border-bottom: 3px solid $blue-brighter
+
+      &:hover, &:focus
+        background-color: $green-brighter
+
+.menu-buttons
+  display: none
+  width: 100%
+  border: 1px solid $white
+  border-width: 1px 0
+  padding: 6px
+  margin-top: 0
+  overflow: hidden
+
+  span
+    color: $white
+
+  .col-xs-6
+    position: relative
+    // padding: 0
+
+  .col-xs-6:first-child
+    padding-left: 0
+    padding-right: 6px
+
+  .col-xs-6:last-child
+    padding-right: 0
+    padding-left: 6px
+
+  .col-xs-6:first-child:after
+    content: '|'
+    color: $white
+    position: absolute
+    right: -2px
+    top: 5px
+
+.menu-buttons.button-group .btn.btn-apply
+  height: 30px
+  font: 12px/1em $helvetica-bold
+  max-width: 300px
+  display: inline-block
+  padding: 8px 30px
+  width: 100%
+  border-radius: 3px
+
+a
+  outline: 0
+
+////////////////
+// THE LINE   //
+////////////////
+.theline
+  background-color: $white
+  // height: 100%
+  position: absolute
+  top: 304px
+  left: 49.7%
+  width: .6%
+  z-index: 10
+  display: none
+  max-width: 7px
+
+  .fill-casing
+    overflow: hidden
+
+  .fill
+    background-color: #80bade
+    width: 100%
+
+  .nubbin,
+  .nubbin-empty
+    content: ''
+    width: 54px
+    height: 54px
+    display: block
+    position: absolute
+    left: -24px
+    top: -40px
+
+  .nubbin-empty
+    z-index: 1
+    background: url('../images/nubbin-empty.png') top left no-repeat
+
+  .nubbin
+    z-index: 2
+    background: url('../images/nubbin.png') top left no-repeat
+    height: 0
+
+@media only screen and (max-device-width: 767px), (max-width: 767px)
+  .theline
+    width: 3px
+
+    .nubbin,
+    .nubbin-empty
+      display: none
+
+////////////////////////
+// REUSABLE ELEMENTS  //
+////////////////////////
+.table
+  width: 100%
+  display: table
+  margin-bottom: 0
+
+.tr
+  display: table-row
+
+.td
+  display: table-cell
+
+.social
+  margin: 0 6px
+
+////////////////////////
+// ACCORDION          //
+////////////////////////
+.accordion
+  background-color: $white
+
+  .ui-state-active,
+  .ui-widget-content .ui-state-active,
+  .ui-widget-header .ui-state-active
+    background-color: transparent!important
+    border-width: 0
+    outline: 0
+
+  .ui-state-default,
+  .ui-widget-content .ui-state-default,
+  .ui-widget-header .ui-state-default
+    background-color: transparent!important
+    border-width: 0
+
+  .ui-widget-content
+    border-width: 0
+
+.accordion
+  padding: 20px
+
+  p
+    @include clearspacing
+    color: $gray-medium
+    font: 16px/1.2em $helvetica-roman
+
+  h2
+    @include clearspacing
+    margin-bottom: 8px
+    color: $blue-cauliflower
+    font: 19px/1.1em $helvetica-bold
+    text-transform: uppercase
+    display: block
+
+.accordion-header
+  @include clearspacing
+  color: $blue-dark
+  font: 22px/1em $helvetica-roman
+  text-align: center
+  padding: 20px
+  display: block
+  position: relative
+  background-color: $white
+
+.fancybox-skin
+  background-color: $white!important
+
+@import 'nav'
+
+@import 'hero'
+
+@import 'hero-mobile'
+
+@import 'herodetails'
+
+@import 'herodetails-mobile'
+
+@import 'cardbenes'
+
+@import 'cardbenes-mobile'
+
+@import 'bottom'
+
+@import 'bottom-mobile'
+
+@import 'footer'
+
+@import 'footer-mobile'

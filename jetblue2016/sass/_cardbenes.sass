@@ -1,0 +1,76 @@
+///////////////
+// BENEFITS  //
+///////////////
+section.section-benes
+  text-align: center
+  z-index: 1
+
+  img
+    display: inline-block
+    width: 44px
+
+  h2
+    @include clearspacing
+    background-color: $blue-dark
+    color: $white
+    font: 22px/1em $helvetica-roman
+    width: 100%
+    text-align: center
+    padding: 10px
+    z-index: 12
+    display: block
+    position: relative
+
+    sup
+      top: -.9em
+      font-size: 50%
+
+  h3
+    @include clearspacing
+    margin-bottom: 8px
+    color: $blue-cauliflower
+    font: 19px/1.1em $helvetica-bold
+    text-transform: uppercase
+    display: block
+
+  p
+    @include clearspacing
+    color: $gray-medium
+    font: 16px/1.2em $helvetica-roman
+
+  .table
+    .tr:nth-child(even)
+      background-color: $blue-lightest
+      z-index: 9
+      position: relative
+
+    .tr:nth-child(even).td-inner
+      background-color: $blue-lightest
+
+    .tr:nth-child(odd) .td-inner
+      background-color: $white
+
+  .td-inner
+    background-color: $blue-lightest
+    z-index: 11
+    position: relative
+    height: 106px
+    display: block
+    margin-top: 3px
+    margin-bottom: 3px
+
+  .td
+    width: 26%
+    vertical-align: middle
+    height: 112px
+
+    &:first-child
+      text-align: right
+
+    &:last-child
+      text-align: left
+
+  .td-benefit
+    width: 48%
+    max-width: 450px
+    min-width: 324px

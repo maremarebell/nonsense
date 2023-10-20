@@ -1,0 +1,50 @@
+////////////
+// FOOTER //
+////////////
+footer.page-footer
+  background-color: $gray-light
+  color: $gray-medium
+  padding: 26px 10px 80px
+  z-index: 14
+  position: relative
+
+  a
+    text-decoration: underline
+    color: $gray-medium
+
+  ul
+    @include clearspacing
+    list-style-type: none
+    margin-bottom: 16px
+
+    &:first-child
+      float: left
+      margin-right: 40px
+      margin-bottom: 0
+
+    .ul-privacy
+      @include clearfix
+      clear: both
+
+    li
+      font-size: 12px
+      margin-bottom: 16px
+
+  p
+    margin-bottom: 16px
+    font: 11px/1.2em Verdana
+    text-indent: -6px
+    margin-left: 6px
+
+    sup
+      display: relative
+      font-size: 1em
+      top: auto
+
+      &:after
+        content: '. '
+        display: inline
+        position: relative
+
+  .pull-left
+    width: 480px
