@@ -1,0 +1,522 @@
+///////////////
+// MIXINS
+///////////////
+@mixin clearfix
+  &:after,
+  &:before
+    content: ""
+    display: table
+    clear: both
+
+@mixin clearspacing
+  padding: 0
+  margin: 0
+
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+@mixin transform( $transformation )
+  -ms-transform: $transformation
+  -webkit-transform: $transformation
+  transform: $transformation
+
+@mixin shadow( $shadow )
+  -webkit-box-shadow: $shadow
+  box-shadow: $shadow
+
+// Removes presets from Bootstrap
+@mixin clearspacing
+  padding: 0
+  margin: 0
+
+///////////////
+// VARIABLES
+///////////////
+$white: #fff
+$black: #000000
+$gray-darker: #333333
+$gray-darkmedium: #67686a
+$gray-dark: #999999
+$gray-medium: #cccccc
+$gray-lightmedium: #dddddd
+$gray-light: #eeeeee
+$gray-lighter: #f5f5f5
+$gray-lightest: #fcfcfc
+
+$blue: #1473e6
+
+
+$helv: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+
+////////////////////
+// BASICS
+////////////////////
+body
+  font-family: $helv
+  font-weight: 400
+  color: $gray-darker
+  line-height: 1.6em
+
+h1
+  @include clearspacing
+  color: $gray-darker
+  font: 400 20px/24px $helv
+  margin-bottom: 20px
+
+h2
+  @include clearspacing
+  color: $gray-darker
+  font-weight: 400
+
+h3
+  @include clearspacing
+  color: $gray-darker
+  font-weight: 400
+
+a,
+a:focus,
+a:hover
+  text-decoration: none
+
+ul
+  @include clearspacing
+  list-style-type: none
+  background-color: $gray-lightest
+  border: 1px solid $gray-light
+
+p
+  @include clearspacing
+
+////////////////////
+// REUSABLE ELEMENTS
+////////////////////
+
+//////////// BUTTONS //////////////////////
+.btn
+  padding: 6px 20px
+  font-size: 13px
+  height: 30px
+  border-radius: 3px
+
+.btn-link
+  color: $gray-dark
+
+  &:hover
+    text-decoration: none
+    color: $gray-darker
+
+.btn-primary
+  border-width: 0
+  background-color: $blue
+
+.btn-link-primary
+  color: $blue
+
+.btn.btn-tiny
+  border: 1px solid $gray-medium
+  padding: 0
+  color: $gray-medium
+  width: 15px
+  height: 15px
+  text-align: center
+  background-color: $white
+  box-shadow: none
+  font-size: 14px
+  // todo: hacks for alignment-- could be reconsidered
+  line-height: .8em
+  margin-top: -2px
+
+  &:focus,
+  &:active
+    outline: 0
+
+// BACK BUTTON
+// Undo Bootstrap default, and move to the left the amount of the padding
+// to line up on the left
+.btn-group > .btn.btn-back:first-child
+  margin-left: -20px
+
+.btn-back
+  &:before
+    content: ''
+    width: 16px
+    height: 8px
+    position: relative
+    display: inline-block
+    background: url('../images/icon-arrow-left.png') top left no-repeat
+
+// Undo bootstrap default
+// Add back all border radiuses to button in button groups
+.btn-group > .btn:first-child:not(:last-child):not( .dropdown-toggle )
+  border-top-right-radius: 3px
+  border-bottom-right-radius: 3px
+
+// Undo bootstrap default
+// Add back margin between buttons on content page
+.page-content .btn-group .btn+.btn
+  margin-left: 10px
+
+.page-add .btn-group .btn+.btn,
+.page-name .btn-group .btn+.btn
+  // Remove 10 extra pixels of space between buttons
+  &:first-child
+    padding-right: 15px
+
+  &:last-child
+    padding-left: 15px
+
+//////////// FORM ELEMENTS ////////////////
+// Placeholder (cannot be grouped)
+::-webkit-input-placeholder
+  color: $gray-medium!important
+::-moz-placeholder
+  color: $gray-medium!important
+::-ms-input-placeholder
+  color: $gray-medium!important
+
+.form-control
+  @include shadow(none)
+  border-color: $gray-lightmedium
+  font-size: 13px
+  height: 30px
+
+////////////////////
+// STRUCTURAL ELEMENTS
+////////////////////
+.panel
+  @include clearspacing
+  padding: 30px 40px
+  position: relative
+
+.panel-outer
+  @include shadow( 0 0 50px $gray-medium )
+  background-color: $white
+  max-width: 500px
+  width: 96%
+  height: 600px
+  margin: 26px auto
+  border-radius: 14px
+  overflow: hidden
+
+// Absoluttely positioned for animations
+.main-content
+  width: 420px
+  height: 540px
+  position: absolute
+  top: 30px
+  left: 40px
+
+.panel-inner
+  @include shadow( none )
+  background-color: $gray-lightest
+  border: 1px solid $gray-light
+  width: 100%
+
+header
+  @include clearfix
+
+.btn-group
+  position: absolute
+  bottom: 0
+
+.cell
+  display: table-cell
+  vertical-align: middle
+
+// TOGGLE SWITCH
+.switch
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  width: 28px
+  height: 14px
+  margin-right: 6px
+  margin-bottom: 0
+
+  input
+    display: none
+
+  .slider
+    @include transition( 0.4s )
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $black
+    border-radius: 34px
+
+    &:before
+      border-radius: 100%
+      @include transition( 0.4s )
+      position: absolute
+      content: ""
+      height: 10px
+      width: 10px
+      left: 2px
+      bottom: 2px
+      background-color: white
+
+    &:hover
+      background-color: $gray-darkmedium
+
+  input
+    &:checked + .slider:before
+      @include transform( translateX(14px) )
+
+// Small switch: 22 x 12
+.switch.switch-small
+  width: 22px
+  height: 12px
+
+  .slider:before
+    height: 8px
+    width: 8px
+
+  input:checked + .slider:before
+    @include transform( translateX(10px) )
+
+////////////////////
+// SPECIFIC PAGES
+////////////////////
+//////////// SHOW CONTENT PAGE ////////////
+.page-content
+
+  .btn-link-primary
+    float: right
+
+  h1
+    float: left
+
+  h2
+    font-size: 14px
+    display: inline-block
+
+  h3
+    font-size: 12px
+    display: inline-block
+
+  // Both lists
+  .list-content
+    .container-drag
+      text-align: center
+      cursor: pointer
+
+    svg
+      height: 20px
+      width: auto
+      fill: $gray-medium
+      vertical-align: middle
+
+    // disabled state
+    .item-disabled
+      h2,
+      h3,
+      .thumb
+        opacity: .3
+
+      .switch .slider
+        background-color: $gray-medium
+
+        &:hover
+          background-color: $gray-lightmedium
+
+    li
+      background-color: $gray-lightest
+
+  .list-items
+    height: 436px
+    overflow-y: scroll
+
+  // MAIN CONTENT
+  .list-items > li
+    border-bottom: 1px solid $gray-light
+    border-top: 1px solid $gray-light
+    margin-top: -1px
+
+    &:last-child
+      border-bottom-width: 0
+
+    .cell
+      height: 50px
+
+    &.item-gallery
+      height: auto
+
+    .container-drag
+      width: 40px
+
+    .container-icon
+      width: 24px
+
+    .container-title
+      width: 314px
+
+  // GALLERY
+  .list-gallery
+    border-width: 0
+    border-top: 1px dotted $gray-light
+    padding: 14px 0
+
+  .list-gallery li
+    margin-bottom: 8px
+    padding-left: 28px
+
+    &:last-child
+      margin-bottom: 0
+
+    .cell
+      height: 20px
+
+    .thumb
+      border-radius: 3px
+
+
+//////////// ADD CONTENT PAGE  ////////////
+.page-add
+  li
+    display: block
+    height: 86px
+    border-bottom: 1px solid $gray-light
+
+  li:last-child
+    border-bottom-width: 0
+
+  li:hover
+    cursor: pointer
+    background-color: $gray-lighter
+
+  h2
+    font-size: 16px
+    margin-bottom: 7px
+
+  p
+    color: $gray-dark
+    font-size: 13px
+
+  svg
+    display: inline-block
+    height: 30px
+    width: auto
+    fill: $gray-medium
+    vertical-align: middle
+
+  .icon-container
+    display: table-cell
+    width: 80px
+    height: 86px
+    text-align: center
+    vertical-align: middle
+
+  .content
+    display: table-cell
+    vertical-align: middle
+
+//////////// NAME CONTENT PAGE ////////////
+.page-name
+  h2
+    font-size: 16px
+    margin-bottom: 24px
+
+  svg
+    display: inline-block
+    fill: $gray-medium
+    height: 50px
+    width: auto
+    margin-bottom: 20px
+
+  .panel-inner
+    height: 436px
+    text-align: center
+    display: table-cell
+    vertical-align: middle
+    width: 420px
+
+  input
+    width: 100%
+    max-width: 200px
+    display: inline-block
+
+  input[type="text"]
+    margin-bottom: 10px
+
+//////////////
+// Animations
+//////////////
+/* slide in from the right */
+.page-content,
+.page-add,
+.page-name
+  background-color: $white
+
+  &.ng-enter
+    -webkit-animation: slideInRight 0.5s both ease-in
+    -moz-animation: slideInRight 0.5s both ease-in
+    animation: slideInRight 0.5s both ease-in
+
+  &.ng-leave
+    -webkit-animation: slideInLeft 0.5s both ease-in
+    -moz-animation: slideInLeft 0.5s both ease-in
+    animation: slideInLeft 0.5s both ease-in
+
+@keyframes slideInRight
+  from
+    transform: translateX(100%)
+
+  to
+    transform: translateX(0)
+
+@keyframes slideInLeft
+  from
+    transform: translateX(100%)
+
+  to
+    transform: translateX(500)
+
+
+@keyframes scaleUp
+  from
+    opacity: 0.3
+    transform: scale(0.8)
+
+
+@media only screen and (max-device-width: 600px), (max-width: 600px)
+  .page-content,
+  .page-add,
+  .page-name
+    background-color: $white
+
+    &.ng-enter
+      -webkit-animation: none
+      -moz-animation: none
+      animation: none
+
+    &.ng-leave
+      -webkit-animation: none
+      -moz-animation: none
+      animation: none
+
+  .main-content
+    width: 100%
+    height: auto
+    position: relative
+    top: auto
+    left: auto
+
+  // Remove scroll from list and show all for ease of use
+  .page-content .list-items
+    height: auto
+    overflow-y: hidden
+
+  // Remove height from outer shadowed container
+  .panel-outer
+    height: auto
+
+  .btn-group
+    position: relative
+    margin-top: 30px
